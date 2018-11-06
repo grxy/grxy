@@ -86,7 +86,6 @@
         ]
     },
     "scripts": {
-        "build": "test",
         "eslint": "eslint '**/*.{js,mjs}'",
         "lint": "run-p prettier eslint",
         "lint:fix": "run-p 'prettier --write' 'eslint --fix'",
