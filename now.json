@@ -1,4 +1,5 @@
 {
+    "alias": "coverage-report-grxy",
     "name": "coverage-report",
     "public": true,
     "static": {
