@@ -1,5 +1,12 @@
 version: 2
 jobs:
+    deploy:
+        docker:
+            - image: circleci/node:10
+        steps:
+            - checkout
+            - run: yarn
+            - run: now alias --token $NOW_TOKEN
     lint:
         docker:
             - image: circleci/node:10
@@ -16,7 +23,11 @@ jobs:
             - run: yarn test
 workflows:
     version: 2
-    build_and_test:
+    build:
         jobs:
+            - deploy:
+                  filters:
+                      branches:
+                          only: master
             - lint
             - test
