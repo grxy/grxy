@@ -1,0 +1,31 @@
+{
+    "name": "@grxy/eslint-config",
+    "version": "1.0.0",
+    "description": "My custom eslint config",
+    "main": "index.js",
+    "author": "Grex",
+    "license": "MIT",
+    "dependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/plugin-proposal-class-properties": "^7.0.0",
+        "@babel/plugin-proposal-export-default-from": "^7.0.0",
+        "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/preset-react": "^7.0.0",
+        "babel-eslint": "^8.2.6",
+        "eslint": "^5.8.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-import": "^2.13.0",
+        "eslint-plugin-jest": "^21.17.0",
+        "eslint-plugin-node": "^6.0.1",
+        "eslint-plugin-prettier": "^2.6.2",
+        "eslint-plugin-promise": "^3.8.0",
+        "eslint-plugin-react": "^7.10.0",
+        "prettier": "^1.14.3",
+        "prettier-eslint-cli": "^4.7.1"
+    },
+    "scripts": {
+        "lint": "eslint ."
+    }
+}
