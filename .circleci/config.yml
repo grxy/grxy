@@ -6,7 +6,7 @@ jobs:
         steps:
             - checkout
             - run: yarn
-            - run: now alias --token $NOW_TOKEN
+            - run: yarn now alias --token $NOW_TOKEN
     lint:
         docker:
             - image: circleci/node:10

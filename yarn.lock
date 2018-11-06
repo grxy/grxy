@@ -6017,6 +6017,11 @@ normalize-path@^2.0.1, normalize-path@^2.1.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
+now@^11.5.2:
+  version "11.5.2"
+  resolved "https://registry.yarnpkg.com/now/-/now-11.5.2.tgz#d91f7f6665ebea5e3a9b96c72215aab2b81fe42e"
+  integrity sha512-h1iL68uLLAFbunBZ4Qt+lN2lS5lN0WTsT1/ulqUGZ0CxgzxLj0iZL13+iNcBitdJmOAYO2reh08JUpkHlCIRHg==
+
 npm-bundled@^1.0.1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.5.tgz#3c1732b7ba936b3a10325aef616467c0ccbcc979"
