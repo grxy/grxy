@@ -80,6 +80,11 @@
             "yarn test --bail --collectCoverage=false --passWithNoTests --findRelatedTests"
         ]
     },
+    "renovate": {
+        "extends": [
+            "config:base"
+        ]
+    },
     "scripts": {
         "eslint": "eslint '**/*.{js,mjs}'",
         "lint": "run-p prettier eslint",
