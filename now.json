@@ -1,0 +1,8 @@
+{
+    "name": "coverage-report",
+    "public": true,
+    "static": {
+        "public": "coverage/lcov-report"
+    },
+    "type": "static"
+}

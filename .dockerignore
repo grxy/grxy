@@ -1,0 +1,5 @@
+*
+!packages/*
+!projects/*
+!yarn.lock
+!package.json
