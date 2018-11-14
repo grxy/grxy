@@ -2,11 +2,13 @@
     "command": {
         "publish": {
             "allowBranch": "feature/release",
-            "ignoreChanges": ["*.md"],
+            "ignoreChanges": [
+                "*.md"
+            ],
             "message": "chore(release): publish"
         }
     },
     "npmClient": "yarn",
     "useWorkspaces": true,
-    "version": "0.0.2"
+    "version": "0.0.3"
 }

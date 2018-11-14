@@ -1,6 +1,6 @@
 {
     "name": "@grxy/test-lerna-publish",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Test lerna publish",
     "main": "index.js",
     "author": "Grex",
