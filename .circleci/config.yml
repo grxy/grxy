@@ -23,6 +23,13 @@ jobs:
             - checkout
             - run: yarn
             - run: yarn lint
+    release:
+        docker:
+            - image: circleci/node:10
+        steps:
+            - checkout
+            - run: yarn
+            - run: yarn release
     test:
         docker:
             - image: circleci/node:10
@@ -40,4 +47,5 @@ workflows:
                       branches:
                           only: master
             - lint
+            - release
             - test
