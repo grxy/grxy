@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:10
+FROM mhart/alpine-node:10 as dev
 
 ENV FORCE_COLOR=1
 ENV NPM_CONFIG_LOGLEVEL warn
