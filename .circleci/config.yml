@@ -50,5 +50,9 @@ workflows:
                       branches:
                           only: master
             - lint
-            - release
+            - release:
+                  requires:
+                      - build
+                      - lint
+                      - test
             - test
