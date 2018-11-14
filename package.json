@@ -91,17 +91,19 @@
         ]
     },
     "scripts": {
+        "build": "yarn compose:prod build",
         "clean": "run-p clean:packages clean:projects clean:root",
         "clean:packages": "rm -rf packages/*/node_modules",
         "clean:projects": "rm -rf projects/*/node_modules",
         "clean:root": "rm -rf node_modules",
+        "compose:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml",
         "dev": "docker-compose up --build",
         "down": "docker-compose down",
         "eslint": "eslint '**/*.{js,mjs}'",
         "lint": "run-p prettier eslint",
         "lint:fix": "run-p 'prettier --write' 'eslint --fix'",
         "prettier": "prettier-eslint '**/*.{graphql,json,md,yml}' --list-different",
-        "start": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",
+        "start": "yarn compose:prod up --build",
         "test": "jest"
     }
 }
