@@ -29,6 +29,7 @@ jobs:
         steps:
             - checkout
             - run: yarn
+            - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
             - run: yarn release
     test:
         docker:
