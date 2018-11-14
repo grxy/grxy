@@ -42,7 +42,7 @@
         "skipCI": false,
         "hooks": {
             "post-checkout": "yarn",
-            "pre-commit": "echo 'I RAN THE HOOKS!!!!!!' && lint-staged"
+            "pre-commit": "lint-staged"
         }
     },
     "jest": {
@@ -105,7 +105,7 @@
         "lint": "run-p prettier eslint",
         "lint:fix": "run-p 'prettier --write' 'eslint --fix'",
         "prettier": "prettier-eslint '**/*.{graphql,json,md,yml}' --list-different",
-        "release": "lerna publish --commit-hooks --conventional-commits --yes",
+        "release": "lerna publish --conventional-commits --yes",
         "start": "yarn compose:prod up --build",
         "test": "jest"
     }
