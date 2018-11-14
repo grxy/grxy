@@ -39,7 +39,7 @@
         "private"
     ],
     "husky": {
-        "skipCi": false,
+        "skipCI": false,
         "hooks": {
             "post-checkout": "yarn",
             "pre-commit": "echo 'I RAN THE HOOKS!!!!!!' && lint-staged"
