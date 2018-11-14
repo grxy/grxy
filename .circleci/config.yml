@@ -1,12 +1,19 @@
 version: 2
 jobs:
+    build:
+        docker:
+            - image: circleci/node:10
+        steps:
+            - checkout
+            - run: yarn
+            - run: yarn build
     deploy:
         docker:
             - image: circleci/node:10
         steps:
             - checkout
             - run: yarn
-            - run: yarn now alias --token $NOW_TOKEN
+            # - run: yarn now alias --token $NOW_TOKEN
     lint:
         docker:
             - image: circleci/node:10
@@ -25,6 +32,7 @@ workflows:
     version: 2
     build:
         jobs:
+            - build
             - deploy:
                   filters:
                       branches:

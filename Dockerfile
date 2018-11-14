@@ -1,21 +1,25 @@
-FROM mhart/alpine-node
+FROM mhart/alpine-node:10
+
+ENV FORCE_COLOR=1
+ENV NPM_CONFIG_LOGLEVEL warn
 
 # Set the default working directory
-WORKDIR /usr/src
+WORKDIR /grxy
+
+COPY ./yarn-offline-mirror ./yarn-offline-mirror
 
 COPY packages/eslint-config/package.json ./packages/eslint-config/
+COPY projects/create-react-app/package.json ./projects/create-react-app/
 
-# Install dependencies
-COPY package.json yarn.lock ./
-RUN yarn
+# Copy workspace manifest
+COPY .yarnrc babel.config.js package.json yarn.lock ./
+
+# Install packages
+RUN yarn --offline
+RUN rm -rf $YARN_CACHE_FOLDER
 
 # Copy the relevant files to the working directory
 COPY . .
 
-# Build and export the app
-RUN yarn test
-
-# Copy to correct location
-RUN mv coverage/lcov-report /public
-
+# Clean up unnecessary caches
 RUN rm -rf `yarn cache dir` ./yarn-offline-mirror

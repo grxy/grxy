@@ -95,10 +95,13 @@
         "clean:packages": "rm -rf packages/*/node_modules",
         "clean:projects": "rm -rf projects/*/node_modules",
         "clean:root": "rm -rf node_modules",
+        "dev": "docker-compose up --build",
+        "down": "docker-compose down",
         "eslint": "eslint '**/*.{js,mjs}'",
         "lint": "run-p prettier eslint",
         "lint:fix": "run-p 'prettier --write' 'eslint --fix'",
         "prettier": "prettier-eslint '**/*.{graphql,json,md,yml}' --list-different",
+        "start": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up --build",
         "test": "jest"
     }
 }
