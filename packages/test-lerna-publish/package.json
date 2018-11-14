@@ -1,0 +1,11 @@
+{
+    "name": "@grxy/test-lerna-publish",
+    "version": "0.0.1",
+    "description": "Test lerna publish",
+    "main": "index.js",
+    "author": "Grex",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    }
+}
