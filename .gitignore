@@ -63,3 +63,4 @@ typings/
 # custom rules
 dist
 private
+!yarn-offline-mirror/*.tgz
