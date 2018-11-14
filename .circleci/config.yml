@@ -32,6 +32,7 @@ jobs:
             - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
             - run: git config --global user.email "andrew@grexa.me"
             - run: git config --global user.name "Grex"
+            - run: cat 'test' > packages/test-lerna-publish/index2.js && git commit -m 'TESTING ADDING A FILE' && exit 1
             - run: yarn release
     test:
         docker:
