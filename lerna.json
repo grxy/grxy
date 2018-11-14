@@ -1,7 +1,7 @@
 {
     "command": {
         "publish": {
-            "allowBranch": "feature/release",
+            "allowBranch": "master",
             "ignoreChanges": ["*.md"],
             "message": "chore(release): publish"
         }

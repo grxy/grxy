@@ -50,10 +50,12 @@ workflows:
                       branches:
                           only: master
             - lint
-            - release
-            # - release:
-            #       requires:
-            #           - build
-            #           - lint
-            #           - test
+            - release:
+                  filters:
+                      branches:
+                          only: master
+                  requires:
+                      - build
+                      - lint
+                      - test
             - test
