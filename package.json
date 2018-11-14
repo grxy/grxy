@@ -18,7 +18,7 @@
         "babel-core": "7.0.0-bridge.0",
         "babel-jest": "23.6.0",
         "danger": "6.0.2",
-        "eslint": "5.8.0",
+        "eslint": "5.6.0",
         "husky": "1.1.3",
         "jest": "23.6.0",
         "lerna": "3.4.3",
@@ -59,6 +59,10 @@
                 "statements": 80
             }
         },
+        "moduleNameMapper": {
+            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+            "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+        },
         "resetModules": true,
         "testPathIgnorePatterns": [
             "/dist/",
@@ -87,10 +91,19 @@
         ]
     },
     "scripts": {
+        "build": "yarn compose:prod build",
+        "clean": "run-p clean:packages clean:projects clean:root",
+        "clean:packages": "rm -rf packages/*/node_modules",
+        "clean:projects": "rm -rf projects/*/node_modules",
+        "clean:root": "rm -rf node_modules",
+        "compose:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml",
+        "dev": "docker-compose up --build",
+        "down": "docker-compose down",
         "eslint": "eslint '**/*.{js,mjs}'",
         "lint": "run-p prettier eslint",
         "lint:fix": "run-p 'prettier --write' 'eslint --fix'",
         "prettier": "prettier-eslint '**/*.{graphql,json,md,yml}' --list-different",
+        "start": "yarn compose:prod up --build",
         "test": "jest"
     }
 }

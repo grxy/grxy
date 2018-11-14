@@ -1,0 +1,20 @@
+version: '3.6'
+
+networks:
+    grxy:
+        driver: bridge
+
+services:
+    create-react-app:
+        build:
+            context: ./projects/create-react-app
+        depends_on:
+            - grxy
+        image: create-react-app
+        networks:
+            - grxy
+
+    grxy:
+        build:
+            context: ./
+        image: grxy

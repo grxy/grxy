@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+    create-react-app:
+        build:
+            target: dev
+        ports:
+            - '3000:3000'
+        volumes:
+            - ./packages:/grxy/packages
+            - ./projects:/grxy/projects

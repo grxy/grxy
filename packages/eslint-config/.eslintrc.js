@@ -6,6 +6,7 @@ module.exports = {
         jest: true,
         node: true,
     },
+    extends: ['react-app'],
     globals: {
         browser: true,
         document: false,
@@ -271,5 +272,10 @@ module.exports = {
         'valid-typeof': 'error',
         'wrap-iife': ['error', 'inside'],
         yoda: 'error',
+    },
+    settings: {
+        react: {
+            version: 'latest',
+        },
     },
 }
