@@ -104,7 +104,7 @@
         "lint": "run-p prettier eslint",
         "lint:fix": "run-p 'prettier --write' 'eslint --fix'",
         "prettier": "prettier-eslint '**/*.{graphql,json,md,yml}' --list-different",
-        "release": "lerna publish patch",
+        "release": "lerna publish --conventional-commits",
         "start": "yarn compose:prod up --build",
         "test": "jest"
     }
