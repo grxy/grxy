@@ -29,6 +29,9 @@ jobs:
         steps:
             - checkout
             - run: yarn
+            - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+            - run: git config --global user.email "andrew@grexa.me"
+            - run: git config --global user.name "Grex"
             - run: yarn release
     test:
         docker:
@@ -47,5 +50,12 @@ workflows:
                       branches:
                           only: master
             - lint
-            - release
+            - release:
+                  filters:
+                      branches:
+                          only: master
+                  requires:
+                      - build
+                      - lint
+                      - test
             - test
