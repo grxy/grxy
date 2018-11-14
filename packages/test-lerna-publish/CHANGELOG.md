@@ -5,53 +5,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.0.5 (2018-11-14)
 
-
-
 ## 0.0.4 (2018-11-14)
-
 
 ### Bug Fixes
 
-* test ([1b0628a](https://github.com/grxy/grxy/commit/1b0628a))
-
-
+-   test ([1b0628a](https://github.com/grxy/grxy/commit/1b0628a))
 
 ## 0.0.3 (2018-11-14)
 
-
 ### Bug Fixes
 
-* test ([556c29a](https://github.com/grxy/grxy/commit/556c29a))
-
-
+-   test ([556c29a](https://github.com/grxy/grxy/commit/556c29a))
 
 ## 0.0.2 (2018-11-14)
 
-
-
-
-
 ## [0.0.4](https://github.com/grxy/grxy/compare/v0.0.3...v0.0.4) (2018-11-14)
-
 
 ### Bug Fixes
 
-* test ([1b0628a](https://github.com/grxy/grxy/commit/1b0628a))
-
-
-
-
+-   test ([1b0628a](https://github.com/grxy/grxy/commit/1b0628a))
 
 ## [0.0.3](https://github.com/grxy/grxy/compare/v0.0.2...v0.0.3) (2018-11-14)
 
-
 ### Bug Fixes
 
-* test ([556c29a](https://github.com/grxy/grxy/commit/556c29a))
-
-
-
-
+-   test ([556c29a](https://github.com/grxy/grxy/commit/556c29a))
 
 ## [0.0.2](https://github.com/grxy/grxy/compare/v0.0.1...v0.0.2) (2018-11-14)
 
