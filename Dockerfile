@@ -17,3 +17,5 @@ RUN yarn test
 
 # Copy to correct location
 RUN mv coverage/lcov-report /public
+
+RUN rm -rf `yarn cache dir` ./yarn-offline-mirror
