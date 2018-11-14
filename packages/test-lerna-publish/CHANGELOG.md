@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/grxy/grxy/compare/@grxy/test-lerna-publish@0.0.5...@grxy/test-lerna-publish@0.0.6) (2018-11-14)
+
+### Bug Fixes
+
+-   lint ([73d0a2b](https://github.com/grxy/grxy/commit/73d0a2b))
+
 ## 0.0.5 (2018-11-14)
 
 ## 0.0.4 (2018-11-14)
