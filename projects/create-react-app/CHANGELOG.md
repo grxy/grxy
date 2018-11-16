@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.1.1...@grxy/create-react-app@0.2.0) (2018-11-16)
+
+### Features
+
+-   add a gatsby project + update config ([ea81176](https://github.com/grxy/grxy/tree/master/projects/create-react-app/commit/ea81176))
+
 ## [0.1.1](https://github.com/grxy/grxy/compare/@grxy/create-react-app@0.1.0...@grxy/create-react-app@0.1.1) (2018-11-15)
 
 **Note:** Version bump only for package @grxy/create-react-app
