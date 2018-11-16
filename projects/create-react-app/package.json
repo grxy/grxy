@@ -14,7 +14,7 @@
     "scripts": {
         "build": "react-scripts build",
         "dev": "react-scripts start",
-        "start": "yarn serve -s build",
+        "start": "yarn serve -s build -p 3000",
         "test": "react-scripts test"
     },
     "browserslist": [
@@ -22,5 +22,6 @@
         "not dead",
         "not ie <= 11",
         "not op_mini all"
-    ]
+    ],
+    "repository": "https://github.com/grxy/grxy/tree/master/projects/create-react-app"
 }

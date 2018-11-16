@@ -9,3 +9,12 @@ services:
         volumes:
             - ./packages:/grxy/packages
             - ./projects:/grxy/projects
+
+    gatsby:
+        build:
+            target: dev
+        ports:
+            - '8000:8000'
+        volumes:
+            - ./packages:/grxy/packages
+            - ./projects:/grxy/projects

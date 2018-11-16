@@ -10,7 +10,16 @@ services:
             context: ./projects/create-react-app
         depends_on:
             - grxy
-        image: create-react-app
+        image: grxy/create-react-app
+        networks:
+            - grxy
+
+    gatsby:
+        build:
+            context: ./projects/gatsby
+        depends_on:
+            - grxy
+        image: grxy/gatsby
         networks:
             - grxy
 

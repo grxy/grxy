@@ -5,4 +5,10 @@ services:
         build:
             target: prod
         ports:
-            - '5000:5000'
+            - '3000:3000'
+
+    gatsby:
+        build:
+            target: prod
+        ports:
+            - '8000:8000'
