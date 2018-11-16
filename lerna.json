@@ -3,7 +3,7 @@
         "publish": {
             "allowBranch": "master",
             "ignoreChanges": ["*.md"],
-            "message": "chore(release): publish"
+            "message": "chore(release): publish [skip ci]"
         }
     },
     "npmClient": "yarn",
