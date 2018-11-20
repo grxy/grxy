@@ -1,7 +1,14 @@
 import React from 'react'
-import Component, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript } from 'next/document'
 
-export default class Document extends Component {
+export default class MyDocument extends Document {
+    static async getInitialProps(ctx) {
+        console.log(Object.keys(ctx))
+
+        const initialProps = await Document.getInitialProps(ctx)
+        return { ...initialProps }
+    }
+
     render() {
         return (
             <html>

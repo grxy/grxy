@@ -101,6 +101,7 @@
         "clean:root": "rm -rf node_modules",
         "compose:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml",
         "dev": "docker-compose up --build",
+        "dev:graphql": "lerna --scope @grxy/apollo-server --scope @grxy/next run dev --parallel",
         "down": "docker-compose down",
         "eslint": "eslint '**/*.{js,mjs}'",
         "lint": "run-p prettier eslint",

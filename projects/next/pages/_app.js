@@ -1,22 +1,29 @@
-import React from 'react'
-import Component, { Container } from 'next/app'
+import App, { Container } from 'next/app'
 import Head from 'next/head'
+import React from 'react'
+import { ApolloProvider } from 'react-apollo'
 
-export default class App extends Component {
+import withApolloClient from '../lib/with-apollo-client'
+
+class MyApp extends App {
     render() {
-        const { Component, pageProps } = this.props
+        const { apolloClient, Component, pageProps } = this.props
 
         return (
             <Container>
-                <Head>
-                    <link
-                        href="/static/parrot.gif"
-                        rel="icon"
-                        type="image/gif"
-                    />
-                </Head>
-                <Component {...pageProps} />
+                <ApolloProvider client={apolloClient}>
+                    <Head>
+                        <link
+                            href="/static/parrot.gif"
+                            rel="icon"
+                            type="image/gif"
+                        />
+                    </Head>
+                    <Component {...pageProps} />
+                </ApolloProvider>
             </Container>
         )
     }
 }
+
+export default withApolloClient(MyApp)
