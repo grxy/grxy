@@ -1,0 +1,21 @@
+{
+    "name": "@grxy/next",
+    "version": "0.0.0",
+    "description": "Next.js playground",
+    "main": "index.js",
+    "repository": "https://github.com/grxy/grxy/tree/master/projects/next",
+    "author": "Grex",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "next": "^7.0.2",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "dev": "next",
+        "build": "next build",
+        "start": "next start"
+    }
+}
