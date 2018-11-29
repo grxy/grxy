@@ -19,6 +19,7 @@ jobs:
                   key: yarn-packages-{{ checksum "yarn.lock" }}
                   paths:
                       - ~/.cache/yarn
+            - run: pwd; ls
             - persist_to_workspace:
                   root: workspace
                   paths:
