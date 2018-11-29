@@ -64,6 +64,7 @@ workflows:
                   filters:
                       branches:
                           only: master
+            - install
             - lint:
                   requires:
                       - install
