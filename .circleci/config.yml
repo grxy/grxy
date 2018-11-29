@@ -26,20 +26,28 @@ jobs:
     build:
         <<: *defaults
         steps:
+            - attach_workspace:
+                  at: .
             - setup_remote_docker:
                   docker_layer_caching: true
             - run: yarn build
     deploy:
         <<: *defaults
         steps:
+            - attach_workspace:
+                  at: .
             - run: echo hello
     lint:
         <<: *defaults
         steps:
+            - attach_workspace:
+                  at: .
             - run: yarn lint
     release:
         <<: *defaults
         steps:
+            - attach_workspace:
+                  at: .
             - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
             - run: git config --global user.email "andrew@grexa.me"
             - run: git config --global user.name "Grex"
@@ -47,6 +55,8 @@ jobs:
     test:
         <<: *defaults
         steps:
+            - attach_workspace:
+                  at: .
             - run:
                   command: yarn test --ci --reporters=default --reporters=jest-junit --no-cache
                   environment:
