@@ -1,55 +1,82 @@
 version: 2
+
+defaults: &defaults
+    docker:
+        - image: circleci/node:10
+
 jobs:
-    build:
-        docker:
-            - image: circleci/node:10
+    install:
+        <<: *defaults
         steps:
             - checkout
+            - restore_cache:
+                  name: Restore Yarn Package Cache
+                  keys:
+                      - yarn-packages-{{ checksum "yarn.lock" }}
+            - run: yarn --frozen-lockfile
+            - save_cache:
+                  name: Save Yarn Package Cache
+                  key: yarn-packages-{{ checksum "yarn.lock" }}
+                  paths:
+                      - ~/.cache/yarn
+            - persist_to_workspace:
+                  root: .
+                  paths:
+                      - .
+    build:
+        <<: *defaults
+        steps:
+            - attach_workspace:
+                  at: .
             - setup_remote_docker:
                   docker_layer_caching: true
-            - run: yarn --offline
             - run: yarn build
     deploy:
-        docker:
-            - image: circleci/node:10
+        <<: *defaults
         steps:
-            - checkout
-            - run: yarn --offline
-            # - run: yarn now alias --token $NOW_TOKEN
+            - attach_workspace:
+                  at: .
     lint:
-        docker:
-            - image: circleci/node:10
+        <<: *defaults
         steps:
-            - checkout
-            - run: yarn --offline
+            - attach_workspace:
+                  at: .
             - run: yarn lint
     release:
-        docker:
-            - image: circleci/node:10
+        <<: *defaults
         steps:
-            - checkout
-            - run: yarn --offline
+            - attach_workspace:
+                  at: .
             - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
             - run: git config --global user.email "andrew@grexa.me"
             - run: git config --global user.name "Grex"
             - run: yarn release
     test:
-        docker:
-            - image: circleci/node:10
+        <<: *defaults
         steps:
-            - checkout
-            - run: yarn --offline
-            - run: yarn test
+            - attach_workspace:
+                  at: .
+            - run:
+                  command: yarn test --ci --reporters=default --reporters=jest-junit --no-cache
+                  environment:
+                      JEST_JUNIT_OUTPUT: 'reports/jest/results.xml'
+            - store_test_results:
+                  path: reports
 workflows:
     version: 2
     build:
         jobs:
-            - build
+            - build:
+                  requires:
+                      - install
             - deploy:
                   filters:
                       branches:
                           only: master
-            - lint
+            - install
+            - lint:
+                  requires:
+                      - install
             - release:
                   filters:
                       branches:
@@ -58,4 +85,6 @@ workflows:
                       - build
                       - lint
                       - test
-            - test
+            - test:
+                  requires:
+                      - install
