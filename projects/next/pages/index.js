@@ -11,5 +11,8 @@ export default () => (
         <Link href="/about" prefetch>
             <a href="/about">About</a>
         </Link>
+        <Link href="/graphql" prefetch>
+            <a href="/graphql">GraphQL</a>
+        </Link>
     </>
 )
