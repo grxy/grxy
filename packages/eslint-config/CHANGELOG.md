@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.1.2...@grxy/eslint-config@0.1.3) (2018-12-02)
+
+### Bug Fixes
+
+-   **deps:** update dependency eslint-plugin-node to v8 ([#6](https://github.com/grxy/grxy/issues/6)) ([7129e26](https://github.com/grxy/grxy/commit/7129e26))
+-   **deps:** update dependency eslint-plugin-promise to v4 ([#9](https://github.com/grxy/grxy/issues/9)) ([19122c0](https://github.com/grxy/grxy/commit/19122c0))
+
 ## [0.1.2](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.1.1...@grxy/eslint-config@0.1.2) (2018-11-30)
 
 ### Bug Fixes
