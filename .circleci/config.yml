@@ -30,7 +30,7 @@ jobs:
                   at: .
             - setup_remote_docker:
                   docker_layer_caching: true
-            - run: cat "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
+            - run: echo "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
             - run: yarn build
     deploy:
         <<: *defaults
