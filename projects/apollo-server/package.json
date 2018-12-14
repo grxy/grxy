@@ -17,7 +17,7 @@
         "@babel/core": "7.1.6",
         "apollo": "2.1.8",
         "dotenv-cli": "1.4.0",
-        "nodemon": "1.18.7",
+        "nodemon": "1.18.9",
         "npm-run-all": "4.1.5"
     },
     "scripts": {
