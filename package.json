@@ -17,7 +17,7 @@
         "@babel/core": "7.1.2",
         "babel-core": "7.0.0-bridge.0",
         "babel-jest": "23.6.0",
-        "danger": "6.1.10",
+        "danger": "6.1.12",
         "eslint": "5.10.0",
         "gatsby-cli": "2.4.6",
         "husky": "1.2.1",
