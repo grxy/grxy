@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.7...@grxy/gatsby@0.1.8) (2018-12-19)
+
+### Bug Fixes
+
+-   **deps:** update gatsby monorepo ([#62](https://github.com/grxy/grxy/tree/master/projects/gatsby/issues/62)) ([24f5e3b](https://github.com/grxy/grxy/tree/master/projects/gatsby/commit/24f5e3b))
+
 ## [0.1.7](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.6...@grxy/gatsby@0.1.7) (2018-12-17)
 
 ### Bug Fixes
