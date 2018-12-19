@@ -19,7 +19,7 @@
         "babel-jest": "23.6.0",
         "danger": "6.1.12",
         "eslint": "5.10.0",
-        "gatsby-cli": "2.4.6",
+        "gatsby-cli": "2.4.7",
         "husky": "1.3.0",
         "jest": "23.6.0",
         "jest-junit": "5.2.0",
