@@ -12,8 +12,8 @@
         "gatsby-plugin-sharp": "2.0.15",
         "gatsby-source-filesystem": "2.0.12",
         "gatsby-transformer-sharp": "2.1.9",
-        "react": "16.6.3",
-        "react-dom": "16.6.3",
+        "react": "16.7.0",
+        "react-dom": "16.7.0",
         "react-helmet": "5.2.0",
         "serve": "10.1.1"
     },
