@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.2.5...@grxy/next@0.3.0) (2018-12-30)
+
+### Features
+
+-   now 2 monorepo config ([#82](https://github.com/grxy/grxy/tree/master/projects/next/issues/82)) ([16bed44](https://github.com/grxy/grxy/tree/master/projects/next/commit/16bed44))
+
 ## [0.2.5](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.2.4...@grxy/next@0.2.5) (2018-12-20)
 
 ### Bug Fixes
