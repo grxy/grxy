@@ -1,4 +1,5 @@
 {
     "builds": [{ "src": "projects/next/package.json", "use": "@now/next" }],
+    "routes": [{ "src": "/(.*)", "dest": "/projects/next/$1" }],
     "version": 2
 }
