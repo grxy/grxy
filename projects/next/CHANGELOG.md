@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.3.0...@grxy/next@0.4.0) (2019-01-01)
+
+### Features
+
+-   deploy apollo-server with now ([#86](https://github.com/grxy/grxy/tree/master/projects/next/issues/86)) ([5ca1ce6](https://github.com/grxy/grxy/tree/master/projects/next/commit/5ca1ce6))
+
 # [0.3.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.2.5...@grxy/next@0.3.0) (2018-12-30)
 
 ### Features
