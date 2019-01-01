@@ -6,7 +6,7 @@ import fetch from 'isomorphic-fetch'
 
 let apolloClient
 
-function create(initialState) {
+function create(initialState, { getUri }) {
     const config = {
         cache: new InMemoryCache().restore(initialState || {}),
         connectToDevTools: process.browser,
@@ -15,7 +15,7 @@ function create(initialState) {
         },
         link: new HttpLink({
             fetch,
-            uri: 'http://localhost:4000', // Server URL (must be absolute)
+            uri: getUri(), // Server URL (must be absolute)
         }),
         ssrMode: !process.browser, // Disables forceFetch on the server (so queries are only run once)
     }
@@ -37,16 +37,16 @@ function create(initialState) {
     return new ApolloClient(config)
 }
 
-export default function initApollo(initialState) {
+export default function initApollo(initialState, options) {
     // Make sure to create a new client for every server-side request so that data
     // isn't shared between connections (which would be bad)
     if (!process.browser) {
-        return create(initialState)
+        return create(initialState, options)
     }
 
     // Reuse client on the client-side
     if (!apolloClient) {
-        apolloClient = create(initialState)
+        apolloClient = create(initialState, options)
     }
 
     return apolloClient

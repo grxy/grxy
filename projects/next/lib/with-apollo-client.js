@@ -7,7 +7,11 @@ export default (App) =>
     class Apollo extends React.Component {
         static displayName = 'withApollo(App)'
         static async getInitialProps(ctx) {
-            const { Component, router } = ctx
+            const {
+                Component,
+                router,
+                ctx: { req, res },
+            } = ctx
 
             let appProps = {}
             if (App.getInitialProps) {
@@ -16,7 +20,25 @@ export default (App) =>
 
             // Run all GraphQL queries in the component tree
             // and extract the resulting data
-            const apollo = initApollo()
+            const apollo = initApollo(
+                {},
+                {
+                    getUri: () => {
+                        if (req) {
+                            return `http://${req.headers.host}/_graphql`
+                        }
+
+                        return '/_graphql'
+                    },
+                },
+            )
+
+            if (res && res.finished) {
+                // When redirecting, the response is finished.
+                // No point in continuing to render
+                return {}
+            }
+
             if (!process.browser) {
                 try {
                     // Run all GraphQL queries
@@ -54,7 +76,9 @@ export default (App) =>
 
         constructor(props) {
             super(props)
-            this.apolloClient = initApollo(props.apolloState)
+            this.apolloClient = initApollo(props.apolloState, {
+                getUri: () => '/_graphql',
+            })
         }
 
         render() {
