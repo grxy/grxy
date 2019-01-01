@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.4.0...@grxy/next@0.5.0) (2019-01-01)
+
+### Features
+
+-   splash page ([#88](https://github.com/grxy/grxy/tree/master/projects/next/issues/88)) ([b6125b1](https://github.com/grxy/grxy/tree/master/projects/next/commit/b6125b1))
+
 # [0.4.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.3.0...@grxy/next@0.4.0) (2019-01-01)
 
 ### Features
