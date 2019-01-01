@@ -1,0 +1,16 @@
+__mocks__
+__tests__
+.circleci
+.vscode
+coverage
+node_modules
+packages/eslint-config
+projects/create-react-app
+projects/gatsby
+yarn-offline-mirror
+/package.json
+**/.cache
+**/.next
+**/dist
+**/*.md
+**/*.yml
