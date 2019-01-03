@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.10](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.1.9...@grxy/eslint-config@0.1.10) (2019-01-03)
+
+### Bug Fixes
+
+-   **deps:** update dependency eslint-plugin-react to v7.12.2 ([#92](https://github.com/grxy/grxy/issues/92)) ([f12d9c4](https://github.com/grxy/grxy/commit/f12d9c4))
+
 ## [0.1.9](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.1.8...@grxy/eslint-config@0.1.9) (2019-01-02)
 
 ### Bug Fixes
