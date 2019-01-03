@@ -24,7 +24,7 @@
         "eslint-plugin-node": "^8.0.0",
         "eslint-plugin-prettier": "^3.0.0",
         "eslint-plugin-promise": "^4.0.0",
-        "eslint-plugin-react": "7.12.1",
+        "eslint-plugin-react": "7.12.2",
         "prettier": "^1.14.3",
         "prettier-eslint-cli": "^4.7.1"
     },
