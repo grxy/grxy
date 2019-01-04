@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.6...@grxy/create-react-app@0.2.7) (2019-01-04)
+
+### Bug Fixes
+
+-   **deps:** update dependency react-scripts to v2.1.3 ([#98](https://github.com/grxy/grxy/tree/master/projects/create-react-app/issues/98)) ([df2edb3](https://github.com/grxy/grxy/tree/master/projects/create-react-app/commit/df2edb3))
+
 ## [0.2.6](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.5...@grxy/create-react-app@0.2.6) (2019-01-04)
 
 ### Bug Fixes
