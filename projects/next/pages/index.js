@@ -1,6 +1,35 @@
 import React from 'react'
 import Head from 'next/head'
 
+const themes = {
+    dark: ['rgba(20,0,69,1)'],
+    light: ['rgba(52, 152, 219, 1)'],
+    orange: ['rgba(180, 90, 0, 1)'],
+    purple: ['rgba(69,0,69,1)'],
+}
+
+const getThemeKey = () => {
+    const hour = new Date().getHours()
+
+    if (hour < 6) {
+        return 'dark'
+    } else if (hour < 9) {
+        return 'orange'
+    } else if (hour < 18) {
+        return 'light'
+    } else if (hour < 20) {
+        return 'orange'
+    }
+
+    return 'purple'
+}
+
+const theme = themes[getThemeKey()]
+
+const [color] = theme
+
+const bgColor = theme[1] || 'rgb(10, 7, 15)'
+
 export default () => (
     <>
         <Head>
@@ -20,15 +49,14 @@ export default () => (
                         height: 100%;
                     }
                     body {
-                        background: rgb(2,0,36);
-                        // background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(69,0,69,1) 100%);
+                        background: ${bgColor};
                         color: #fff;
                         font-family: Lato, Helvetica, sans-serif;
                     }
 
                     header {
-                        background: rgb(2,0,36);
-                        background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(69,0,69,1) 100%);
+                        background: ${bgColor};
+                        background: linear-gradient(0deg, ${bgColor} 0%, ${color} 100%);
                         padding: 180px 0;
                     }
 
