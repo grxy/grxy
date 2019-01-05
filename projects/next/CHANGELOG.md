@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.5.0...@grxy/next@0.6.0) (2019-01-05)
+
+### Features
+
+-   add themes based on time of day ([#104](https://github.com/grxy/grxy/tree/master/projects/next/issues/104)) ([fd5b2b4](https://github.com/grxy/grxy/tree/master/projects/next/commit/fd5b2b4))
+
 # [0.5.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.4.0...@grxy/next@0.5.0) (2019-01-01)
 
 ### Features
