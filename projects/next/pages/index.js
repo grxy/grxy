@@ -58,6 +58,7 @@ export default () => (
                         background: ${bgColor};
                         background: linear-gradient(0deg, ${bgColor} 0%, ${color} 100%);
                         padding: 180px 0;
+                        transition: background 0.5s;
                     }
 
                     h1 {
