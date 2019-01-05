@@ -9,7 +9,8 @@ const themes = {
 }
 
 const getThemeKey = () => {
-    const hour = new Date().getHours()
+    const timezoneOffset = -7
+    const hour = (new Date().getUTCHours() + timezoneOffset + 24) % 24
 
     if (hour < 6) {
         return 'dark'
@@ -58,7 +59,7 @@ export default () => (
                         background: ${bgColor};
                         background: linear-gradient(0deg, ${bgColor} 0%, ${color} 100%);
                         padding: 180px 0;
-                        transition: background 0.5s;
+                        transition: background 1s;
                     }
 
                     h1 {
