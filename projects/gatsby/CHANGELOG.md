@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.22](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.21...@grxy/gatsby@0.1.22) (2019-01-06)
+
+### Bug Fixes
+
+-   **deps:** update dependency gatsby-plugin-offline to v2.0.21 ([#105](https://github.com/grxy/grxy/tree/master/projects/gatsby/issues/105)) ([349002a](https://github.com/grxy/grxy/tree/master/projects/gatsby/commit/349002a))
+
 ## [0.1.21](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.20...@grxy/gatsby@0.1.21) (2019-01-04)
 
 ### Bug Fixes
