@@ -11797,6 +11797,7 @@ listr-silent-renderer@^1.1.1:
 listr-update-renderer@^0.4.0:
   version "0.4.0"
   resolved "https://github.com/okonet/listr-update-renderer/tarball/upgrade-log-update#06073fa93166277607a7814f4e1f83960081414c"
+  integrity sha1-NE2YDaLKLosUW6MFkI8yrj9MyKc=
   dependencies:
     chalk "^1.1.3"
     cli-truncate "^0.2.1"
@@ -13258,10 +13259,10 @@ normalize-url@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
-now@13.0.4:
-  version "13.0.4"
-  resolved "https://registry.yarnpkg.com/now/-/now-13.0.4.tgz#0e753c7a2f1107cc07ead0e8cff8caf4d41c04fa"
-  integrity sha512-o7uS6JEdlslP021/zC/5VzrXuCLfFak43AbjSq3l4QcRlyUyXq40hZiLcSsk6m+oZeFY7RpDHWg0vEMYrYLQZQ==
+now@13.1.2:
+  version "13.1.2"
+  resolved "https://registry.yarnpkg.com/now/-/now-13.1.2.tgz#dda24eb622edeedc43e694d31d9c81f2154896c4"
+  integrity sha512-v6K4141Zcw/EsEC88uQ8DusP5LnbLIYFEblpH9BiQXCx4s4qmk56xxT7AXRCFBMtUFTX0hF8Bd2rqWGs0HzjAQ==
 
 npm-bundled@^1.0.1:
   version "1.0.5"
