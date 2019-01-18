@@ -80,9 +80,6 @@
             "/dist/",
             "/node_modules/"
         ],
-        "transform": {
-            ".*": "babel-jest"
-        },
         "transformIgnorePatterns": [
             "<rootDir>/node_modules/(?!@grxy)"
         ]
