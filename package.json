@@ -18,6 +18,9 @@
         "babel-core": "7.0.0-bridge.0",
         "babel-jest": "23.6.0",
         "danger": "7.0.2",
+        "enzyme": "^3.8.0",
+        "enzyme-adapter-react-16": "^1.7.1",
+        "enzyme-to-json": "^3.3.5",
         "eslint": "5.12.0",
         "gatsby-cli": "2.4.8",
         "husky": "1.3.1",
@@ -67,10 +70,17 @@
             "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
         },
         "resetModules": true,
+        "setupTestFrameworkScriptFile": "<rootDir>/scripts/jest/setupTestFrameworkScriptFile.js",
+        "snapshotSerializers": [
+            "enzyme-to-json/serializer"
+        ],
         "testPathIgnorePatterns": [
             "/dist/",
             "/node_modules/"
         ],
+        "transform": {
+            ".*": "babel-jest"
+        },
         "transformIgnorePatterns": [
             "<rootDir>/node_modules/(?!@grxy)"
         ]
@@ -103,6 +113,7 @@
         "compose:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml",
         "dev": "docker-compose up --build",
         "dev:graphql": "lerna --scope @grxy/apollo-server --scope @grxy/next run dev --parallel",
+        "dev:next": "lerna --scope @grxy/next run dev --parallel",
         "down": "docker-compose down",
         "eslint": "eslint '**/*.{js,mjs}'",
         "lint": "run-p prettier eslint",

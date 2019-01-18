@@ -1,5 +1,14 @@
 module.exports = {
     plugins: [
+        [
+            'module-resolver',
+            {
+                alias: {
+                    '@grxy/components': '@grxy/components/src',
+                    '@grxy/theme': '@grxy/theme/src',
+                },
+            },
+        ],
         '@babel/plugin-proposal-class-properties',
 
         // export * as ns from 'module/path'
