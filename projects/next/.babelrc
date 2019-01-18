@@ -1,9 +1,0 @@
-{
-    "extends": "../../babel.config.js",
-    "presets": [[
-        "next/babel",
-            {
-                "@babel/preset-env": { "useBuiltIns": "usage" },
-            },
-        ]]
-}
