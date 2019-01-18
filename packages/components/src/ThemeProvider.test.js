@@ -1,7 +1,7 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import ThemeProvider from './'
+import ThemeProvider from './ThemeProvider'
 
 jest.mock('@grxy/theme', () => ({
     getTheme: () => ({
@@ -20,6 +20,16 @@ describe('<ThemeProvider />', () => {
     })
 
     it('renders a theme based on the current time', () => {
-        expect(wrapper).toMatchSnapshot()
+        expect(wrapper).toMatchInlineSnapshot(`
+<ThemeProvider>
+  <ThemeProvider
+    theme={
+      Object {
+        "test": true,
+      }
+    }
+  />
+</ThemeProvider>
+`)
     })
 })
