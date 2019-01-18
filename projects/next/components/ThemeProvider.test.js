@@ -3,7 +3,7 @@ import React from 'react'
 
 import ThemeProvider from './ThemeProvider'
 
-jest.mock('@grxy/theme', () => ({
+jest.mock('@grxy/next/lib/theme', () => ({
     getTheme: () => ({
         test: true,
     }),

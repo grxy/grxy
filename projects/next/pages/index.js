@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-import HeroHeader from '@grxy/components/HeroHeader'
+import HeroHeader from '@grxy/next/components/HeroHeader'
 
 export default () => (
     <>

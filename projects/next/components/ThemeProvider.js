@@ -2,7 +2,7 @@ import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming'
 import { node } from 'prop-types'
 import React from 'react'
 
-import { getTheme } from '@grxy/theme'
+import { getTheme } from '@grxy/next/lib/theme'
 
 const theme = getTheme()
 

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import React from 'react'
 import { ApolloProvider } from 'react-apollo'
 
-import ThemeProvider from '@grxy/components/ThemeProvider'
+import ThemeProvider from '@grxy/next/components/ThemeProvider'
 
 import { Global, css } from '@emotion/core'
 
