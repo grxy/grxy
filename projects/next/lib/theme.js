@@ -1,15 +1,12 @@
-// const defaultTheme = {
-//     colors: {
-//         background: 'rgb(10, 7, 15)',
-//     },
-// }
+import merge from 'deepmerge'
+
+const defaultTheme = {
+    colors: {
+        background: 'rgb(10, 7, 15)',
+    },
+}
 
 const themes = {
-    common: {
-        colors: {
-            background: 'rgb(10, 7, 15)',
-        },
-    },
     dark: {
         colors: {
             primary: 'rgba(20,0,69,1)',
@@ -51,9 +48,8 @@ const getThemeKey = (date) => {
 
 const getTheme = (date = new Date()) => {
     const theme = themes[getThemeKey(date)]
-    theme.colors.background = themes.common.colors.background
 
-    return theme
+    return merge(defaultTheme, theme)
 }
 
 export { getTheme }
