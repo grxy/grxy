@@ -13,8 +13,8 @@
         "graphql": "14.0.2"
     },
     "devDependencies": {
-        "@babel/cli": "7.1.5",
-        "@babel/core": "7.1.6",
+        "@babel/cli": "7.2.3",
+        "@babel/core": "7.2.2",
         "apollo": "2.1.9",
         "dotenv-cli": "1.4.0",
         "nodemon": "1.18.9",

@@ -3,6 +3,10 @@ import Head from 'next/head'
 import React from 'react'
 import { ApolloProvider } from 'react-apollo'
 
+import ThemeProvider from '../components/ThemeProvider'
+
+import { Global, css } from '@emotion/core'
+
 import withApolloClient from '../lib/with-apollo-client'
 
 class MyApp extends App {
@@ -11,16 +15,39 @@ class MyApp extends App {
 
         return (
             <Container>
-                <ApolloProvider client={apolloClient}>
-                    <Head>
-                        <link
-                            href="/static/parrot.gif"
-                            rel="icon"
-                            type="image/gif"
+                <ThemeProvider>
+                    <ApolloProvider client={apolloClient}>
+                        <Head>
+                            <link
+                                href="/static/parrot.gif"
+                                rel="icon"
+                                type="image/gif"
+                            />
+                        </Head>
+                        <Global
+                            styles={(theme) =>
+                                css`
+                                    * {
+                                        border: none;
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+
+                                    html {
+                                        height: 100%;
+                                    }
+
+                                    body {
+                                        background: ${theme.colors.background};
+                                        color: #fff;
+                                        font-family: Lato, Helvetica, sans-serif;
+                                    }
+                                `
+                            }
                         />
-                    </Head>
-                    <Component {...pageProps} />
-                </ApolloProvider>
+                        <Component {...pageProps} />
+                    </ApolloProvider>
+                </ThemeProvider>
             </Container>
         )
     }
