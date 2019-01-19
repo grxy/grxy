@@ -63,8 +63,8 @@ describe('<HeroHeader />', () => {
   background: primaryColor;
   content: '';
   position: absolute;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
+  -webkit-transition: background 2s ease-in-out;
+  transition: background 2s ease-in-out;
   z-index: -1;
   top: 0;
   right: 0;

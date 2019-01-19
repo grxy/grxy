@@ -1,12 +1,19 @@
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming'
-import { node } from 'prop-types'
+import { node, string } from 'prop-types'
 import React, { Component } from 'react'
 
 import { getTheme } from '../lib/theme'
 class ThemeProvider extends Component {
-    state = {
-        theme: getTheme(),
+    static defaultProps = {
+        serverTime: undefined,
     }
+
+    static propTypes = {
+        children: node.isRequired,
+        serverTime: string,
+    }
+
+    state = getTheme(new Date(this.props.serverTime))
 
     componentDidMount() {
         /*
@@ -26,16 +33,14 @@ class ThemeProvider extends Component {
 
         const timeout = next - now
 
+        this.refreshTheme()
+
         this.timeout = setTimeout(() => {
             this.interval = setInterval(() => {
-                this.setState(() => ({
-                    theme: getTheme(),
-                }))
+                this.refreshTheme()
             }, 6e4) // every 1 hour
 
-            this.setState(() => ({
-                theme: getTheme(),
-            }))
+            this.refreshTheme()
         }, timeout)
     }
 
@@ -44,17 +49,17 @@ class ThemeProvider extends Component {
         clearInterval(this.interval)
     }
 
+    refreshTheme() {
+        this.setState(() => getTheme())
+    }
+
     render() {
         return (
-            <EmotionThemeProvider theme={this.state.theme}>
+            <EmotionThemeProvider theme={this.state}>
                 {this.props.children}
             </EmotionThemeProvider>
         )
     }
-}
-
-ThemeProvider.propTypes = {
-    children: node.isRequired,
 }
 
 export default ThemeProvider

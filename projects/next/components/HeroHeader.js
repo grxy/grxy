@@ -16,7 +16,7 @@ const Header = styled.header`
         background: ${(props) => props.theme.colors.primary};
         content: '';
         position: absolute;
-        transition: background 0.3s;
+        transition: background 2s ease-in-out;
         z-index: -1;
 
         top: 0;

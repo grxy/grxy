@@ -15,7 +15,7 @@ class MyApp extends App {
 
         return (
             <Container>
-                <ThemeProvider>
+                <ThemeProvider serverTime={this.props.serverTime}>
                     <ApolloProvider client={apolloClient}>
                         <Head>
                             <link
@@ -53,4 +53,32 @@ class MyApp extends App {
     }
 }
 
-export default withApolloClient(MyApp)
+const withServerTime = (App) => {
+    class ServerTime extends React.Component {
+        static async getInitialProps(ctx) {
+            let appProps = {}
+            if (App.getInitialProps) {
+                appProps = await App.getInitialProps(ctx)
+            }
+
+            let serverTime
+
+            if (!process.browser) {
+                serverTime = new Date(2019, 1, 1, 0).toISOString()
+            }
+
+            return {
+                ...appProps,
+                serverTime,
+            }
+        }
+
+        render() {
+            return <App {...this.props} apolloClient={this.apolloClient} />
+        }
+    }
+
+    return ServerTime
+}
+
+export default withServerTime(withApolloClient(MyApp))
