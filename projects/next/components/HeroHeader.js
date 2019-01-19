@@ -7,10 +7,23 @@ const Header = styled.header`
     background: linear-gradient(
         0deg,
         ${(props) => props.theme.colors.background} 0%,
-        ${(props) => props.theme.colors.primary} 100%
+        rgba(0, 0, 0, 0)
     );
     padding: 180px 0;
-    transition: background 1s;
+    position: relative;
+
+    &:before {
+        background: ${(props) => props.theme.colors.primary};
+        content: '';
+        position: absolute;
+        transition: background 0.3s;
+        z-index: -1;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 `
 
 const H1 = styled.h1`

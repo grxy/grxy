@@ -54,10 +54,22 @@ describe('<HeroHeader />', () => {
         expect(wrapper.find(HeroHeader)).toMatchInlineSnapshot(`
 .emotion-1 {
   background: backgroundColor;
-  background: linear-gradient( 0deg, backgroundColor 0%, primaryColor 100% );
+  background: linear-gradient( 0deg, backgroundColor 0%, rgba(0,0,0,0) );
   padding: 180px 0;
-  -webkit-transition: background 1s;
-  transition: background 1s;
+  position: relative;
+}
+
+.emotion-1:before {
+  background: primaryColor;
+  content: '';
+  position: absolute;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .emotion-0 {
