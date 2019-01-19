@@ -38,7 +38,7 @@ class ThemeProvider extends Component {
         this.timeout = setTimeout(() => {
             this.interval = setInterval(() => {
                 this.refreshTheme()
-            }, 6e4) // every 1 hour
+            }, 36e5) // every 1 hour
 
             this.refreshTheme()
         }, timeout)
