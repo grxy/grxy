@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.1.13...@grxy/eslint-config@0.2.0) (2019-01-18)
+
+### Features
+
+-   add emotion support ([#127](https://github.com/grxy/grxy/issues/127)) ([2174e57](https://github.com/grxy/grxy/commit/2174e57))
+
 ## [0.1.13](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.1.12...@grxy/eslint-config@0.1.13) (2019-01-14)
 
 **Note:** Version bump only for package @grxy/eslint-config

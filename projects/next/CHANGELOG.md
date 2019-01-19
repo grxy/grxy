@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.6.0...@grxy/next@0.7.0) (2019-01-18)
+
+### Features
+
+-   add emotion support ([#127](https://github.com/grxy/grxy/tree/master/projects/next/issues/127)) ([2174e57](https://github.com/grxy/grxy/tree/master/projects/next/commit/2174e57))
+
 # [0.6.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.5.0...@grxy/next@0.6.0) (2019-01-05)
 
 ### Features
