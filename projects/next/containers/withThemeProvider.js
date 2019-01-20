@@ -10,12 +10,18 @@ const withThemeProvider = (App) => {
         static async getInitialProps(ctx) {
             let appProps = {}
 
+            // get wrapped component initial props
             if (App.getInitialProps) {
                 appProps = await App.getInitialProps(ctx)
             }
 
             let serverTime, serverTimezoneOffset
 
+            /**
+             * Get time and timezone from server and pass to client.
+             * This is necessary to achieve a smooth client hydration from the
+             * server if the server is in a different timezone than the client.
+             */
             if (!process.browser) {
                 const date = new Date()
                 serverTime = date.valueOf()
@@ -32,6 +38,14 @@ const withThemeProvider = (App) => {
         constructor(props) {
             super(props)
 
+            /**
+             * This block of code sets the client-side theme to be equal to the
+             * server-side theme on the initial client side render.It does so by
+             * adding the client timezone offset to the server timezone offset
+             * to set the Date object equal to the time in the server's
+             * timezone. Once rendered, the theme re-renders and transitions the
+             * theme to the local time-based theme.
+             */
             const date = new Date(this.props.serverTime)
             const minutes = date.getMinutes()
             const timezoneOffset =
@@ -43,29 +57,28 @@ const withThemeProvider = (App) => {
         }
 
         componentDidMount() {
-            /*
-                The intent of the following code is to refresh the theme at the top
-                of every hour. I'm sure there are simpler ways to do this using
-                moment or date-fns, but I don't want to add a date lib just yet.
+            /**
+             * The intent of the following code is to refresh the theme at the
+             * top of every hour. I'm sure there are simpler ways to do this
+             * using moment or date-fns, but I don't want to add a date lib
+             * just yet.
+             *
+             * TODO: convert to hook: useScheduledCallback or useHourlyCallback
+             */
+            const nextHour = new Date()
+            nextHour.setHours(nextHour.getHours() + 1)
+            nextHour.setMinutes(0)
+            nextHour.setSeconds(0)
+            nextHour.setMilliseconds(0)
 
-                TODO: convert to hook: useScheduledCallback or useHourlyCallback
-            */
-            const now = new Date()
-
-            const next = new Date(now)
-            next.setHours(now.getHours() + 1)
-            next.setMinutes(0)
-            next.setSeconds(0)
-            next.setMilliseconds(0)
-
-            const timeout = next - now
+            const timeout = nextHour - Date.now()
 
             this.refreshTheme()
 
             this.timeout = setTimeout(() => {
                 this.interval = setInterval(() => {
                     this.refreshTheme()
-                }, 36e5) // every 1 hour
+                }, 36e5) // every 1 hour (3600s * 1000)
 
                 this.refreshTheme()
             }, timeout)
