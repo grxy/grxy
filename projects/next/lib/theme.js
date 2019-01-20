@@ -29,10 +29,11 @@ const themes = {
     },
 }
 
+/**
+ * @param {Date} date a date object
+ * @returns {Object} a theme
+ */
 const getThemeKey = (date) => {
-    // const timezoneOffset = -7
-    // const hour = (date.getUTCHours() + timezoneOffset + 24) % 24
-
     const hour = date.getHours()
 
     if (hour < 6) {

@@ -112,6 +112,7 @@
         "clean:projects": "rm -rf projects/*/node_modules",
         "clean:root": "rm -rf node_modules",
         "compose:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml",
+        "coverage": "open coverage/lcov-report/index.html",
         "dev": "docker-compose up --build",
         "dev:graphql": "lerna --scope @grxy/apollo-server --scope @grxy/next run dev --parallel",
         "dev:next": "lerna --scope @grxy/next run dev --parallel",
