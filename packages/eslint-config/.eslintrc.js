@@ -6,7 +6,7 @@ module.exports = {
         jest: true,
         node: true,
     },
-    extends: ['react-app'],
+    extends: [require.resolve('eslint-config-react-app')],
     globals: {
         browser: true,
         document: false,
@@ -235,8 +235,8 @@ module.exports = {
         'react/jsx-uses-vars': 'error',
 
         /*
-        * Note: this rule only applies to an inline cb to Array.prototype.map
-        */
+         * Note: this rule only applies to an inline cb to Array.prototype.map
+         */
         'react/no-array-index-key': 'warn',
         'react/no-children-prop': 'error',
         'react/no-danger': 'error',
@@ -244,8 +244,8 @@ module.exports = {
         'react/no-direct-mutation-state': 'error',
 
         /*
-       * Enable this rule to keep component files simple
-       */
+         * Enable this rule to keep component files simple
+         */
         'react/no-multi-comp': ['warn', { ignoreStateless: true }],
 
         'react/no-redundant-should-component-update': 'error',
