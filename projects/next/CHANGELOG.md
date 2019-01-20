@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.7.0...@grxy/next@0.8.0) (2019-01-20)
+
+### Features
+
+-   hourly theme refresh ([#131](https://github.com/grxy/grxy/tree/master/projects/next/issues/131)) ([f502afc](https://github.com/grxy/grxy/tree/master/projects/next/commit/f502afc))
+
 # [0.7.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.6.0...@grxy/next@0.7.0) (2019-01-18)
 
 ### Features
