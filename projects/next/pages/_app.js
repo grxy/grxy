@@ -51,4 +51,4 @@ class MyApp extends App {
     }
 }
 
-export default withThemeProvider(withApolloClient(MyApp))
+export default withApolloClient(withThemeProvider(MyApp))
