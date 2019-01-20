@@ -22,7 +22,6 @@
         "graphql-tag": "2.10.0",
         "isomorphic-fetch": "2.2.1",
         "next": "7.0.2",
-        "next-plugin-transpile-modules": "^1.0.0",
         "react": "16.7.0",
         "react-apollo": "alpha",
         "react-dom": "16.7.0",
