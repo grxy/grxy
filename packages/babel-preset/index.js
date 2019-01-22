@@ -5,6 +5,7 @@ module.exports = () => ({
             {
                 alias: {
                     '@grxy/components': '@grxy/components/src',
+                    '@grxy/data-structures': '@grxy/data-structures/src',
                     '@grxy/theme': '@grxy/theme/src',
                 },
             },
