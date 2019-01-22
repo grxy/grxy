@@ -1,6 +1,5 @@
 module.exports = () => ({
     plugins: [
-        'emotion',
         [
             'module-resolver',
             {
