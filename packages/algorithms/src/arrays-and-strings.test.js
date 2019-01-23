@@ -1,4 +1,4 @@
-import { compressString } from './arrays-and-strings'
+import { compressString, zeroMatrix } from './arrays-and-strings'
 
 describe('array and string algorithms', () => {
     describe('naive string compression', () => {
@@ -20,6 +20,48 @@ describe('array and string algorithms', () => {
 
         it('returns the original string if empty', () => {
             expect(compressString('')).toBe('')
+        })
+    })
+
+    describe('zero matrix', () => {
+        it('zeros a matrix', () => {
+            const input = [
+                [1, 2, 3, 4, 5],
+                [0, 0, 3, 4, 5],
+                [1, 2, 0, 4, 5],
+                [1, 2, 3, 0, 5],
+                [1, 2, 3, 4, 5],
+            ]
+
+            const expected = [
+                [0, 0, 0, 0, 5],
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 5],
+            ]
+
+            expect(zeroMatrix(input)).toEqual(expected)
+        })
+
+        it('does not change the matrix if no zero is encountered', () => {
+            const input = [
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5],
+            ]
+
+            const expected = [
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5],
+                [1, 2, 3, 4, 5],
+            ]
+
+            expect(zeroMatrix(input)).toEqual(expected)
         })
     })
 })

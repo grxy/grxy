@@ -27,4 +27,54 @@ const compressString = (string) => {
     return string
 }
 
-export { compressString }
+/**
+ * Zeroes a column/row if element in column/row is zero
+ * @param {Array<Array>} matrix a numeric matrix
+ * @returns {Array<Array>} the modified matrix
+ */
+const zeroMatrix = (matrix) => {
+    const rows = matrix.length
+    const columns = matrix[0].length
+
+    const rowsToZero = []
+    const columnsToZero = []
+
+    const zeroRow = (row) => {
+        for (let column = 0; column < columns; column++) {
+            matrix[row][column] = 0
+        }
+    }
+
+    const zeroColumn = (column) => {
+        for (let row = 0; row < rows; row++) {
+            matrix[row][column] = 0
+        }
+    }
+
+    for (let row = 0; row < rows; row++) {
+        for (let column = 0; column < columns; column++) {
+            if (matrix[row][column] === 0) {
+                rowsToZero[row] = true
+                columnsToZero[column] = true
+            }
+        }
+    }
+
+    // zero rows
+    for (let row = 0; row < rows; row++) {
+        if (rowsToZero[row]) {
+            zeroRow(row)
+        }
+    }
+
+    // zero columns
+    for (let column = 0; column < columns; column++) {
+        if (columnsToZero[column]) {
+            zeroColumn(column)
+        }
+    }
+
+    return matrix
+}
+
+export { compressString, zeroMatrix }
