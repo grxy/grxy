@@ -15,6 +15,8 @@
     },
     "devDependencies": {
         "@babel/core": "7.2.2",
+        "@storybook/addon-knobs": "^4.1.7",
+        "@storybook/react": "^4.1.7",
         "babel-core": "7.0.0-bridge.0",
         "babel-jest": "23.6.0",
         "danger": "7.0.2",
@@ -114,6 +116,7 @@
         "compose:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml",
         "coverage": "open coverage/lcov-report/index.html",
         "dev": "docker-compose up --build",
+        "dev:cra": "lerna --scope @grxy/create-react-app run dev --parallel",
         "dev:graphql": "lerna --scope @grxy/apollo-server --scope @grxy/next run dev --parallel",
         "dev:next": "lerna --scope @grxy/next run dev --parallel",
         "down": "docker-compose down",
@@ -123,6 +126,7 @@
         "prettier": "prettier-eslint '**/*.{graphql,json,md,yml}' --list-different",
         "release": "lerna publish --conventional-commits --yes",
         "start": "yarn compose:prod up --build",
+        "storybook": "start-storybook -p 9001 -c .storybook",
         "test": "jest"
     }
 }
