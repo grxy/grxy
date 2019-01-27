@@ -9,7 +9,7 @@ const Header = styled.header`
         ${(props) => props.theme.colors.background} 0%,
         rgba(0, 0, 0, 0)
     );
-    padding: 180px 0;
+    padding: 180px 90px;
     position: relative;
 
     &:before {
@@ -41,6 +41,7 @@ const H2 = styled.h2`
     font-size: 1em;
     font-size: 4vw;
     font-weight: 100;
+    padding-top: 20px;
     text-align: center;
 
     @media screen and (min-width: 600px) {

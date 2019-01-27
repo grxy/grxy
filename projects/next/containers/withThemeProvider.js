@@ -53,7 +53,7 @@ const withThemeProvider = (App) => {
 
             date.setMinutes(minutes + timezoneOffset)
 
-            this.state = getTheme(date)
+            this.state = getTheme(date, this.props.themeKey)
         }
 
         componentDidMount() {
@@ -86,13 +86,26 @@ const withThemeProvider = (App) => {
             window.refreshTheme = this.refreshTheme.bind(this)
         }
 
+        componentDidUpdate(prevProps) {
+            /**
+             * ThemeProvider becomes a controlled component when the themeKey
+             * prop is passed in, preventing the theme from being set based on
+             * local time of day.
+             */
+            if (this.props.themeKey !== prevProps.themeKey) {
+                this.refreshTheme()
+                this.props.onThemeChange &&
+                    this.props.onThemeChange(this.props.themeKey)
+            }
+        }
+
         componentWillUnmount() {
             clearTimeout(this.timeout)
             clearInterval(this.interval)
         }
 
         refreshTheme() {
-            const theme = getTheme(new Date())
+            const theme = getTheme(new Date(), this.props.themeKey)
 
             this.setState(() => theme)
         }

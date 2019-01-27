@@ -10,11 +10,11 @@ describe('<HeroHeader />', () => {
         wrapper = shallow(<HeroHeader title="This is the title" />)
 
         expect(wrapper).toMatchInlineSnapshot(`
-<Styled(header)>
-  <Styled(h1)>
+<Header>
+  <H1>
     This is the title
-  </Styled(h1)>
-</Styled(header)>
+  </H1>
+</Header>
 `)
     })
 
@@ -27,14 +27,14 @@ describe('<HeroHeader />', () => {
         )
 
         expect(wrapper).toMatchInlineSnapshot(`
-<Styled(header)>
-  <Styled(h1)>
+<Header>
+  <H1>
     This is the title
-  </Styled(h1)>
-  <Styled(h2)>
+  </H1>
+  <H2>
     This is the subtitle
-  </Styled(h2)>
-</Styled(header)>
+  </H2>
+</Header>
 `)
     })
 
@@ -52,14 +52,14 @@ describe('<HeroHeader />', () => {
         )
 
         expect(wrapper.find(HeroHeader)).toMatchInlineSnapshot(`
-.emotion-1 {
+.emotion-2 {
   background: backgroundColor;
-  background: linear-gradient( 0deg, backgroundColor 0%, rgba(0,0,0,0) );
-  padding: 180px 0;
+  background: linear-gradient( 0deg,backgroundColor 0%,rgba(0,0,0,0) );
+  padding: 180px 90px;
   position: relative;
 }
 
-.emotion-1:before {
+.emotion-2:before {
   background: primaryColor;
   content: '';
   position: absolute;
@@ -89,19 +89,19 @@ describe('<HeroHeader />', () => {
   subtitle=""
   title="This is the title"
 >
-  <Styled(header)>
+  <Header>
     <header
-      className="emotion-1"
+      className="emotion-2 emotion-3"
     >
-      <Styled(h1)>
+      <H1>
         <h1
-          className="emotion-0"
+          className="emotion-0 emotion-1"
         >
           This is the title
         </h1>
-      </Styled(h1)>
+      </H1>
     </header>
-  </Styled(header)>
+  </Header>
 </HeroHeader>
 `)
     })

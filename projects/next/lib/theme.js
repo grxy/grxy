@@ -33,7 +33,7 @@ const themes = {
  * @param {Date} date a date object
  * @returns {Object} a theme
  */
-const getThemeKey = (date) => {
+const getThemeKey = (date = new Date()) => {
     const hour = date.getHours()
 
     if (hour < 6) {
@@ -49,11 +49,11 @@ const getThemeKey = (date) => {
     return 'purple'
 }
 
-const getTheme = (date = new Date()) => {
-    const theme = themes[getThemeKey(date)]
+const getTheme = (date = new Date(), themeKey = '') => {
+    const theme = themes[themeKey || getThemeKey(date)]
 
     return merge(defaultTheme, theme)
 }
 
-export { getTheme }
+export { getTheme, getThemeKey }
 export default themes
