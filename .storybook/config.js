@@ -5,8 +5,6 @@ import loadDecorators from './decorators'
 function loadStories() {
     loadDecorators()
 
-    console.log('loadStories')
-
     const importAll = (r) => {
         r.keys().forEach(r)
     }
