@@ -16,7 +16,7 @@
     "devDependencies": {
         "@babel/core": "7.2.2",
         "babel-core": "7.0.0-bridge.0",
-        "babel-jest": "23.6.0",
+        "babel-jest": "24.0.0",
         "danger": "7.0.2",
         "enzyme": "^3.8.0",
         "enzyme-adapter-react-16": "^1.7.1",
@@ -24,9 +24,9 @@
         "eslint": "5.12.1",
         "gatsby-cli": "2.4.8",
         "husky": "1.3.1",
-        "jest": "23.6.0",
+        "jest": "24.0.0",
         "jest-emotion": "^10.0.6",
-        "jest-junit": "6.0.1",
+        "jest-junit": "6.1.0",
         "lerna": "3.10.6",
         "lint-staged": "8.1.0",
         "now": "13.1.2",
@@ -73,7 +73,9 @@
             "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
         },
         "resetModules": true,
-        "setupTestFrameworkScriptFile": "<rootDir>/scripts/jest/setupTestFrameworkScriptFile.js",
+        "setupFilesAfterEnv": [
+            "<rootDir>/scripts/jest/setupTestFrameworkScriptFile.js"
+        ],
         "snapshotSerializers": [
             "enzyme-to-json/serializer",
             "jest-emotion"
