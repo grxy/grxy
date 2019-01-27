@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.2.1...@grxy/babel-preset@0.3.0) (2019-01-27)
+
+### Features
+
+-   add storybook support ([#149](https://github.com/grxy/grxy/issues/149)) ([72e8a32](https://github.com/grxy/grxy/commit/72e8a32))
+
 ## [0.2.1](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.2.0...@grxy/babel-preset@0.2.1) (2019-01-27)
 
 **Note:** Version bump only for package @grxy/babel-preset
