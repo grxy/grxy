@@ -12,6 +12,7 @@ packages/eslint-config
 projects/create-react-app
 projects/gatsby
 yarn-offline-mirror
+/package.json
 **/.cache
 **/.next
 **/dist
