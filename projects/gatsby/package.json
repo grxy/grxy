@@ -4,8 +4,8 @@
     "version": "0.1.30",
     "private": true,
     "dependencies": {
-        "gatsby": "2.0.101",
-        "gatsby-image": "2.0.28",
+        "gatsby": "2.0.103",
+        "gatsby-image": "2.0.29",
         "gatsby-plugin-manifest": "2.0.14",
         "gatsby-plugin-offline": "2.0.22",
         "gatsby-plugin-react-helmet": "3.0.5",
