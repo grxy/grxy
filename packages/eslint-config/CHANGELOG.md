@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.6...@grxy/eslint-config@0.2.7) (2019-01-31)
+
+### Bug Fixes
+
+-   **deps:** update dependency prettier to v1.16.3 ([#166](https://github.com/grxy/grxy/issues/166)) ([21b6f21](https://github.com/grxy/grxy/commit/21b6f21))
+
 ## [0.2.6](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.5...@grxy/eslint-config@0.2.6) (2019-01-30)
 
 ### Bug Fixes
