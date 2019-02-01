@@ -4,7 +4,7 @@
     "version": "0.1.35",
     "private": true,
     "dependencies": {
-        "gatsby": "2.0.110",
+        "gatsby": "2.0.111",
         "gatsby-image": "2.0.29",
         "gatsby-plugin-manifest": "2.0.17",
         "gatsby-plugin-offline": "2.0.22",
