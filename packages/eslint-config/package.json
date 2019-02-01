@@ -7,7 +7,7 @@
     "license": "MIT",
     "dependencies": {
         "babel-eslint": "10.0.1",
-        "eslint": "5.12.1",
+        "eslint": "5.13.0",
         "eslint-config-prettier": "4.0.0",
         "eslint-config-react-app": "^3.0.6",
         "eslint-plugin-flowtype": "3.2.1",
