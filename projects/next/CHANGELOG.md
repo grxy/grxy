@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.3](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.9.2...@grxy/next@0.9.3) (2019-02-03)
+
+### Bug Fixes
+
+-   pin terser dep in next project ([038e048](https://github.com/grxy/grxy/tree/master/projects/next/commit/038e048))
+
 ## [0.9.2](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.9.1...@grxy/next@0.9.2) (2019-02-01)
 
 ### Bug Fixes
