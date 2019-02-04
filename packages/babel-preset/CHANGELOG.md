@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.0...@grxy/babel-preset@0.3.1) (2019-02-04)
+
+### Bug Fixes
+
+-   **deps:** update emotion monorepo to v10.0.7 ([#190](https://github.com/grxy/grxy/issues/190)) ([56c9b72](https://github.com/grxy/grxy/commit/56c9b72))
+
 # [0.3.0](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.2.1...@grxy/babel-preset@0.3.0) (2019-01-27)
 
 ### Features
