@@ -7,9 +7,6 @@
     "author": "Grex",
     "license": "MIT",
     "private": true,
-    "resolutions": {
-        "terser": "3.14.1"
-    },
     "dependencies": {
         "@emotion/core": "10.0.7",
         "@emotion/styled": "10.0.7",
