@@ -68,9 +68,9 @@ workflows:
     version: 2
     build:
         jobs:
-            - build:
-                  requires:
-                      - install
+            # - build:
+            #       requires:
+            #           - install
             - deploy:
                   filters:
                       branches:
