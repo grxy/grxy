@@ -84,7 +84,7 @@ workflows:
                       branches:
                           only: master
                   requires:
-                      - build
+                      #   - build
                       - lint
                       - test
             - test:
