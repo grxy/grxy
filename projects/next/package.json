@@ -11,15 +11,15 @@
         "terser": "3.14.1"
     },
     "dependencies": {
-        "@emotion/core": "10.0.6",
-        "@emotion/styled": "10.0.6",
+        "@emotion/core": "10.0.7",
+        "@emotion/styled": "10.0.7",
         "apollo-cache-inmemory": "alpha",
         "apollo-client": "alpha",
         "apollo-link": "1.2.8",
         "apollo-link-http": "1.5.11",
         "apollo-link-ws": "1.0.14",
         "deepmerge": "3.1.0",
-        "emotion-theming": "10.0.6",
+        "emotion-theming": "10.0.7",
         "graphql": "14.1.1",
         "graphql-subscriptions": "1.0.0",
         "graphql-tag": "2.10.1",
