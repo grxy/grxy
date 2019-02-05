@@ -21,7 +21,7 @@
         "babel-jest": "24.0.0",
         "danger": "7.0.7",
         "enzyme": "3.8.0",
-        "enzyme-adapter-react-16": "1.8.0",
+        "enzyme-adapter-react-16": "1.9.0",
         "enzyme-to-json": "3.3.5",
         "eslint": "5.13.0",
         "gatsby-cli": "2.4.9",
