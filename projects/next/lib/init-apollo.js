@@ -11,7 +11,9 @@ function create(initialState, { getUri }) {
         cache: new InMemoryCache().restore(initialState || {}),
         connectToDevTools: process.browser,
         initializers: {
-            Query: () => ({}),
+            Query: () => ({
+                __typename: 'Query',
+            }),
         },
         link: new HttpLink({
             fetch,
