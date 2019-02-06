@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.9.7...@grxy/next@0.10.0) (2019-02-06)
+
+### Features
+
+-   add useHourlyEffect and implement in withThemeProvider ([#203](https://github.com/grxy/grxy/tree/master/projects/next/issues/203)) ([d61b8ca](https://github.com/grxy/grxy/tree/master/projects/next/commit/d61b8ca))
+
 ## [0.9.7](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.9.6...@grxy/next@0.9.7) (2019-02-06)
 
 ### Bug Fixes
