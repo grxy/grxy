@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.1](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.0...@grxy/next@0.10.1) (2019-02-06)
+
+### Bug Fixes
+
+-   missing \_\_typename issue in console ([3bee789](https://github.com/grxy/grxy/tree/master/projects/next/commit/3bee789))
+
 # [0.10.0](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.9.7...@grxy/next@0.10.0) (2019-02-06)
 
 ### Features
