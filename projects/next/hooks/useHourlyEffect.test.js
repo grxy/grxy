@@ -41,7 +41,7 @@ describe('useHourlyEffect', () => {
         })
     })
 
-    it('re-runs the effect when bits change', () => {
+    it('re-runs the effect when inputs change', () => {
         act(() => {
             fn = jest.fn()
 
@@ -67,7 +67,7 @@ describe('useHourlyEffect', () => {
         expect(fn).toHaveBeenCalledTimes(2)
     })
 
-    it('does not re-run the effect when bits do not change', () => {
+    it('does not re-run the effect when inputs do not change', () => {
         act(() => {
             fn = jest.fn()
 

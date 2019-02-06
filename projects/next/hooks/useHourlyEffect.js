@@ -3,11 +3,11 @@ import { useEffect } from 'react'
 /**
  * This hook runs a side effect function on load and at the top of every hour
  *
- * @param {Function} effectFn an effect function
- * @param {Array} changedBits the changed bits to be passed to the underlying useEffect hook
+ * @param {Function} create a function that runs a side effect
+ * @param {Array} inputs the inputs to be passed to the underlying useEffect hook
  * @return {undefined}
  */
-function useHourlyEffect(effectFn, changedBits) {
+function useHourlyEffect(create, inputs) {
     let timeout, interval
 
     useEffect(() => {
@@ -25,21 +25,21 @@ function useHourlyEffect(effectFn, changedBits) {
 
         const timeoutMs = nextHour - Date.now()
 
-        effectFn()
+        create()
 
         timeout = setTimeout(() => {
             interval = setInterval(() => {
-                effectFn()
+                create()
             }, 36e5) // every 1 hour (3600s * 1000)
 
-            effectFn()
+            create()
         }, timeoutMs)
 
         return () => {
             clearTimeout(timeout)
             clearInterval(interval)
         }
-    }, changedBits)
+    }, inputs)
 }
 
 export default useHourlyEffect
