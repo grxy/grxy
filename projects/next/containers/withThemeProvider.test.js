@@ -1,5 +1,6 @@
 import { mount } from 'enzyme'
 import React from 'react'
+import { act } from 'react-dom/test-utils'
 
 import withThemeProvider from './withThemeProvider'
 
@@ -12,19 +13,21 @@ jest.mock('../lib/theme', () => ({
 describe('<withThemeProvider />', () => {
     let wrapper, Component, ThemeProvider
     beforeEach(() => {
-        jest.useFakeTimers()
+        act(() => {
+            jest.useFakeTimers()
 
-        Component = () => 'test'
+            Component = () => 'test'
 
-        ThemeProvider = withThemeProvider(Component)
+            ThemeProvider = withThemeProvider(Component)
 
-        wrapper = mount(
-            <ThemeProvider>
-                <></>
-            </ThemeProvider>,
-        )
+            wrapper = mount(
+                <ThemeProvider>
+                    <></>
+                </ThemeProvider>,
+            )
 
-        jest.runTimersToTime(72e5)
+            jest.runTimersToTime(72e5)
+        })
     })
 
     it('renders a theme based on the current time', () => {
