@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.1...@grxy/babel-preset@0.3.2) (2019-02-11)
+
+### Bug Fixes
+
+-   **deps:** update dependency babel-plugin-module-resolver to v3.2.0 ([#215](https://github.com/grxy/grxy/issues/215)) ([c000310](https://github.com/grxy/grxy/commit/c000310))
+
 ## [0.3.1](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.0...@grxy/babel-preset@0.3.1) (2019-02-04)
 
 ### Bug Fixes
