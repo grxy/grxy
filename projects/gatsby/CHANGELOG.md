@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.50](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.49...@grxy/gatsby@0.1.50) (2019-02-14)
+
+### Bug Fixes
+
+-   **deps:** update react monorepo to v16.8.2 ([#229](https://github.com/grxy/grxy/tree/master/projects/gatsby/issues/229)) ([d32a59f](https://github.com/grxy/grxy/tree/master/projects/gatsby/commit/d32a59f))
+
 ## [0.1.49](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.48...@grxy/gatsby@0.1.49) (2019-02-14)
 
 ### Bug Fixes
