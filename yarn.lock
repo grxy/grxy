@@ -10589,10 +10589,10 @@ gatsby-react-router-scroll@^2.0.4:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-source-filesystem@2.0.20:
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.20.tgz#0bb3dcf905c6856d87e7a44d73bd8ff056cd5b95"
-  integrity sha512-nS2hBsqKEQIJ5Yd+g9p++FcsfmvbQmZlBUzx04VPBYZBu2LuLA/ZxQkmdiTNnbDQ18KJw0Zu2PnmUerPnEMqyg==
+gatsby-source-filesystem@2.0.21:
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.21.tgz#038b129079b198026dd789f099639fd09d58e7e1"
+  integrity sha512-lovfFurLb4h0eTJuCQHYhwPCbpZLePdtR3IurCjK+z5S0KLOJFqOOnsqO3rTkspus1EWzB3fkUZn8XuCB9lkWA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
@@ -10622,10 +10622,10 @@ gatsby-transformer-sharp@2.1.14:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.1.9:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.9.tgz#940530ad392313ac931ae20bd0d7e291f1a2e5ad"
-  integrity sha512-pVjkldHxcJTD691nEg0N6z1+SBmsPNiHKBgMbIz6PvhqN9RWK8uxgzqVgpvzaYdCuOaTHvj9Z4oQpSIRH/Fvbg==
+gatsby@2.1.11:
+  version "2.1.11"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.1.11.tgz#e9f10754cae419534aef06768ff309150ae395c1"
+  integrity sha512-PD/UGJRR5FHUmd99HvXdm3A4e7tUbE36chKyRJugXzxJ+0O0MbiKd5+Ovpi0+Ni87JEq2SP3Zhao1xAwJdHtkw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
