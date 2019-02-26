@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.20](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.19...@grxy/apollo-server@0.3.20) (2019-02-26)
+
+### Bug Fixes
+
+-   **deps:** update dependency apollo-server to v2.4.7 ([#264](https://github.com/grxy/grxy/tree/master/projects/apollo-server/issues/264)) ([c5f4464](https://github.com/grxy/grxy/tree/master/projects/apollo-server/commit/c5f4464))
+
 ## [0.3.19](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.18...@grxy/apollo-server@0.3.19) (2019-02-25)
 
 **Note:** Version bump only for package @grxy/apollo-server
