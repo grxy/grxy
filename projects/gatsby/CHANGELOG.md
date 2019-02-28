@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.62](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.61...@grxy/gatsby@0.1.62) (2019-02-28)
+
+### Bug Fixes
+
+-   **deps:** update dependency gatsby-transformer-sharp to v2.1.15 ([#271](https://github.com/grxy/grxy/tree/master/projects/gatsby/issues/271)) ([a0181fd](https://github.com/grxy/grxy/tree/master/projects/gatsby/commit/a0181fd))
+
 ## [0.1.61](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.60...@grxy/gatsby@0.1.61) (2019-02-28)
 
 ### Bug Fixes
