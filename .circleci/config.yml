@@ -80,7 +80,7 @@ jobs:
         steps:
             - attach_workspace:
                   at: .
-            - run: yarn --frozen-lockfile
+            - run: yarn cypress install
             - run: yarn test:integration
 
 workflows:
