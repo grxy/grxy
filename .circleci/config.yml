@@ -83,8 +83,6 @@ jobs:
         steps:
             - attach_workspace:
                   at: .
-            - run: yarn cypress install
-            - run: yarn cypress run --record
             - cypress/run:
                   #   requires:
                   #       - cypress/install
