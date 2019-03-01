@@ -19,6 +19,7 @@
         "@storybook/react": "4.1.13",
         "babel-core": "7.0.0-bridge.0",
         "babel-jest": "24.1.0",
+        "cypress": "^3.1.5",
         "danger": "7.0.14",
         "enzyme": "3.9.0",
         "enzyme-adapter-react-16": "1.10.0",
@@ -86,6 +87,7 @@
             "/dist/",
             "/node_modules/"
         ],
+        "testRegex": "\\.test\\.js$",
         "transformIgnorePatterns": [
             "<rootDir>/node_modules/(?!@grxy)"
         ]
@@ -129,6 +131,7 @@
         "release": "lerna publish --conventional-commits --yes",
         "start": "yarn compose:prod up --build",
         "storybook": "start-storybook -p 9001 -c .storybook",
-        "test": "jest"
+        "test": "jest",
+        "test:integration": "CYPRESS_baseUrl=http://localhost:3000 yarn cypress run"
     }
 }
