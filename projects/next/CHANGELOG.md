@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.5](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.4...@grxy/next@0.10.5) (2019-03-01)
+
+### Bug Fixes
+
+-   **deps:** update dependency next to v8 ([#214](https://github.com/grxy/grxy/tree/master/projects/next/issues/214)) ([7247328](https://github.com/grxy/grxy/tree/master/projects/next/commit/7247328))
+
 ## [0.10.4](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.3...@grxy/next@0.10.4) (2019-02-21)
 
 ### Bug Fixes
