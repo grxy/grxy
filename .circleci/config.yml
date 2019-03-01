@@ -78,19 +78,19 @@ jobs:
                       JEST_JUNIT_OUTPUT: 'reports/jest/results.xml'
             - store_test_results:
                   path: reports
-    test:integration:
-        <<: *defaults
-        steps:
-            - attach_workspace:
-                  at: .
-            - cypress/run:
-                  #   requires:
-                  #       - cypress/install
-                  record: true # record results on Cypress Dashboard
-                  parallel: true # split all specs across machines
-                  #   parallelism: 4 # use 4 CircleCI machines to finish quickly
-                  group: 'all tests' # name this group "all tests" on the dashboard
-                  #   start: 'npm start' # start server before running tests
+    # test:integration:
+    #     <<: *defaults
+    #     steps:
+    #         - attach_workspace:
+    #               at: .
+    #         - cypress/run:
+    #               #   requires:
+    #               #       - cypress/install
+    #               record: true # record results on Cypress Dashboard
+    #               parallel: true # split all specs across machines
+    #               #   parallelism: 4 # use 4 CircleCI machines to finish quickly
+    #               group: 'all tests' # name this group "all tests" on the dashboard
+    #               #   start: 'npm start' # start server before running tests
 
 workflows:
     version: 2
@@ -123,5 +123,14 @@ workflows:
                   requires:
                       - install
             - test:integration:
+                  jobs:
+                      - cypress/run:
+                        #   requires:
+                        #       - cypress/install
+                        record: true # record results on Cypress Dashboard
+                        parallel: true # split all specs across machines
+                        #   parallelism: 4 # use 4 CircleCI machines to finish quickly
+                        group: 'all tests' # name this group "all tests" on the dashboard
+                        #   start: 'npm start' # start server before running tests
                   requires:
                       - install
