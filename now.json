@@ -10,6 +10,7 @@
     "github": {
         "autoAlias": false
     },
+    "name": "grxy",
     "routes": [
         { "src": "/_graphql", "dest": "/projects/apollo-server/src/index.js" },
         { "src": "/(.*)", "dest": "/projects/next/$1" }
