@@ -36,6 +36,7 @@ jobs:
                   root: .
                   paths:
                       - .
+                      - ~/.cache/Cypress
     build:
         <<: *defaults
         steps:
@@ -84,7 +85,7 @@ jobs:
         steps:
             - attach_workspace:
                   at: .
-            - run: yarn
+            # - run: yarn
             - run: yarn cypress run --record
 
 workflows:
