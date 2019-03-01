@@ -84,8 +84,7 @@ jobs:
         steps:
             - checkout
             - run: yarn
-            # - run: yarn cypress install
-            - run: yarn cypress run --record --group all tests
+            - run: yarn cypress run --record
 
 workflows:
     version: 2
