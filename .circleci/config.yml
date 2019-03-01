@@ -80,6 +80,7 @@ jobs:
         steps:
             - attach_workspace:
                   at: .
+            - run: yarn --frozen-lockfile
             - run: yarn test:integration
 
 workflows:
