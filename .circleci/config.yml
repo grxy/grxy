@@ -111,7 +111,7 @@ workflows:
                       - install
                       - lint
                       - test
-                      - cypress/run
+                      - test-integration
             - test:
                   requires:
                       - install
