@@ -16,7 +16,7 @@ jobs:
         <<: *defaults
         steps:
             - attach_workspace:
-                  at: ~
+                  at: .
             - run: yarn now alias --token=$NOW_TOKEN
     install:
         <<: *defaults
@@ -33,15 +33,14 @@ jobs:
                   paths:
                       - ~/.cache/yarn
             - persist_to_workspace:
-                  root: ~
+                  root: .
                   paths:
-                      - ./project
-                      - ./.cache/Cypress
+                      - .
     build:
         <<: *defaults
         steps:
             - attach_workspace:
-                  at: ~
+                  at: .
             - setup_remote_docker:
                   docker_layer_caching: true
             - run: echo "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
@@ -50,19 +49,19 @@ jobs:
         <<: *defaults
         steps:
             - attach_workspace:
-                  at: ~
+                  at: .
             - run: yarn now --token=$NOW_TOKEN
     lint:
         <<: *defaults
         steps:
             - attach_workspace:
-                  at: ~
+                  at: .
             - run: yarn lint
     release:
         <<: *defaults
         steps:
             - attach_workspace:
-                  at: ~
+                  at: .
             - checkout
             - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
             - run: git config --global user.email "andrew@grexa.me"
@@ -72,7 +71,7 @@ jobs:
         <<: *defaults
         steps:
             - attach_workspace:
-                  at: ~
+                  at: .
             - run:
                   command: yarn test --ci --reporters=default --reporters=jest-junit --no-cache
                   environment:
@@ -84,8 +83,8 @@ jobs:
             - image: cypress/browsers:chrome67-ff57
         steps:
             - attach_workspace:
-                  at: ~
-            # - run: yarn
+                  at: .
+            - run: yarn
             - run: yarn cypress run --record
 
 workflows:
