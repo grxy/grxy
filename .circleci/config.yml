@@ -82,8 +82,8 @@ jobs:
         docker:
             - image: cypress/browsers:chrome67-ff57
         steps:
-            - checkout
-            - run: yarn
+            - attach_workspace:
+                  at: .
             - run: yarn cypress run --record
 
 workflows:
@@ -116,4 +116,6 @@ workflows:
             - test:
                   requires:
                       - install
-            - test-integration
+            - test-integration:
+                  requires:
+                      - deploy
