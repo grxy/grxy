@@ -78,7 +78,7 @@ jobs:
                       JEST_JUNIT_OUTPUT: 'reports/jest/results.xml'
             - store_test_results:
                   path: reports
-    test:integration:
+    test-integration:
         <<: *defaults
         steps:
             - run: yarn
@@ -115,4 +115,4 @@ workflows:
             - test:
                   requires:
                       - install
-            - test:integration
+            - test-integration
