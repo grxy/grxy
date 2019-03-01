@@ -17,7 +17,7 @@ jobs:
         steps:
             - attach_workspace:
                   at: .
-            - run: yarn now alias
+            - run: yarn now alias --token=$NOW_TOKEN
     install:
         <<: *defaults
         steps:
@@ -50,7 +50,7 @@ jobs:
         steps:
             - attach_workspace:
                   at: .
-            - run: yarn now
+            - run: yarn now --token=$NOW_TOKEN
     lint:
         <<: *defaults
         steps:
