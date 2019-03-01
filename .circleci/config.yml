@@ -81,6 +81,7 @@ jobs:
     test-integration:
         <<: *defaults
         steps:
+            - checkout
             - run: yarn
             - run: yarn cypress install
             - run: yarn cypress run --record --group all tests
