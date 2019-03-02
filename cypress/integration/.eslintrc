@@ -1,0 +1,6 @@
+{
+    "globals": {
+        "context": true,
+        "cy": true
+    }
+}

@@ -1,8 +1,13 @@
-version: 2
+version: 2.1
 
 defaults: &defaults
     docker:
         - image: circleci/node:10
+
+master: &master
+    filters:
+        branches:
+            only: master
 
 jobs:
     install:
@@ -23,6 +28,12 @@ jobs:
                   root: .
                   paths:
                       - .
+    alias:
+        <<: *defaults
+        steps:
+            - attach_workspace:
+                  at: .
+            - run: yarn --silent now alias --token=$NOW_TOKEN
     build:
         <<: *defaults
         steps:
@@ -32,11 +43,19 @@ jobs:
                   docker_layer_caching: true
             - run: echo "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
             - run: yarn build
+    danger:
+        <<: *defaults
+        steps:
+            - attach_workspace:
+                  at: .
+            - run: yarn danger ci
     deploy:
         <<: *defaults
         steps:
             - attach_workspace:
                   at: .
+            - run: yarn --silent now --token=$NOW_TOKEN
+            - run: yarn --silent now --token=$NOW_TOKEN alias grxy-$CIRCLE_SHA1.now.sh
     lint:
         <<: *defaults
         steps:
@@ -64,6 +83,15 @@ jobs:
                       JEST_JUNIT_OUTPUT: 'reports/jest/results.xml'
             - store_test_results:
                   path: reports
+    test-integration:
+        docker:
+            - image: cypress/browsers:chrome67-ff57
+        steps:
+            - attach_workspace:
+                  at: .
+            - run: yarn
+            - run: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run --record
+
 workflows:
     version: 2
     build:
@@ -71,22 +99,32 @@ workflows:
             # - build:
             #       requires:
             #           - install
+            - alias:
+                  <<: *master
+                  requires:
+                      - deploy
+                      - release
+            - danger:
+                  requires:
+                      - install
             - deploy:
-                  filters:
-                      branches:
-                          only: master
+                  requires:
+                      - install
             - install
             - lint:
                   requires:
                       - install
             - release:
-                  filters:
-                      branches:
-                          only: master
+                  <<: *master
                   requires:
                       #   - build
+                      - install
                       - lint
                       - test
+                      - test-integration
             - test:
                   requires:
                       - install
+            - test-integration:
+                  requires:
+                      - deploy
