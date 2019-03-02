@@ -9,15 +9,7 @@ master: &master
         branches:
             only: master
 
-orbs:
-    cypress: cypress-io/cypress@1
 jobs:
-    alias:
-        <<: *defaults
-        steps:
-            - attach_workspace:
-                  at: .
-            - run: yarn --silent now alias --token=$NOW_TOKEN
     install:
         <<: *defaults
         steps:
@@ -36,6 +28,12 @@ jobs:
                   root: .
                   paths:
                       - .
+    alias:
+        <<: *defaults
+        steps:
+            - attach_workspace:
+                  at: .
+            - run: yarn --silent now alias --token=$NOW_TOKEN
     build:
         <<: *defaults
         steps:
@@ -45,6 +43,12 @@ jobs:
                   docker_layer_caching: true
             - run: echo "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
             - run: yarn build
+    danger:
+        <<: *defaults
+        steps:
+            - attach_workspace:
+                  at: .
+            - run: yarn danger ci
     deploy:
         <<: *defaults
         steps:
@@ -100,6 +104,9 @@ workflows:
                   requires:
                       - deploy
                       - release
+            - danger:
+                  requires:
+                      - install
             - deploy:
                   requires:
                       - install
