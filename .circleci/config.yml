@@ -51,6 +51,7 @@ jobs:
             - attach_workspace:
                   at: .
             - run: yarn --silent now --token=$NOW_TOKEN
+            - run: yarn --silent now --token=$NOW_TOKEN alias grxy-$CIRCLE_SHA1.now.sh
     lint:
         <<: *defaults
         steps:
@@ -85,7 +86,7 @@ jobs:
             - attach_workspace:
                   at: .
             - run: yarn
-            - run: yarn cypress run --record
+            - run: CYPRESS_baseUrl=grxy-$CIRCLE_SHA1.now.sh yarn cypress run --record
 
 workflows:
     version: 2
