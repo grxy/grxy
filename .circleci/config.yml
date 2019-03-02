@@ -86,7 +86,7 @@ jobs:
             - attach_workspace:
                   at: .
             - run: yarn
-            - run: CYPRESS_baseUrl=grxy-$CIRCLE_SHA1.now.sh yarn cypress run --record
+            - run: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run --record
 
 workflows:
     version: 2
