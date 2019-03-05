@@ -9,7 +9,7 @@
         "serve": "10.1.2"
     },
     "devDependencies": {
-        "eslint": "5.15.0"
+        "eslint": "5.15.1"
     },
     "scripts": {
         "build": "react-scripts build",
