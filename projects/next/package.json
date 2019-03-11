@@ -25,7 +25,7 @@
         "react": "16.8.4",
         "react-apollo": "alpha",
         "react-dom": "16.8.4",
-        "subscriptions-transport-ws": "0.9.15"
+        "subscriptions-transport-ws": "0.9.16"
     },
     "scripts": {
         "dev": "next",
