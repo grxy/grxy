@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.19](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.18...@grxy/eslint-config@0.2.19) (2019-03-12)
+
+### Bug Fixes
+
+-   **deps:** update dependency eslint-plugin-jest to v22.3.2 ([#300](https://github.com/grxy/grxy/issues/300)) ([48771f7](https://github.com/grxy/grxy/commit/48771f7))
+
 ## [0.2.18](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.17...@grxy/eslint-config@0.2.18) (2019-03-12)
 
 ### Bug Fixes
