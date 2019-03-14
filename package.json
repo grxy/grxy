@@ -20,7 +20,7 @@
         "babel-core": "7.0.0-bridge.0",
         "babel-jest": "24.5.0",
         "cypress": "3.1.5",
-        "danger": "7.0.14",
+        "danger": "7.0.15",
         "enzyme": "3.9.0",
         "enzyme-adapter-react-16": "1.11.2",
         "enzyme-to-json": "3.3.5",
