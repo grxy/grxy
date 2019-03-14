@@ -10,7 +10,7 @@
         "gatsby-plugin-offline": "2.0.25",
         "gatsby-plugin-react-helmet": "3.0.9",
         "gatsby-plugin-sharp": "2.0.28",
-        "gatsby-source-filesystem": "2.0.25",
+        "gatsby-source-filesystem": "2.0.26",
         "gatsby-transformer-sharp": "2.1.17",
         "react": "16.8.4",
         "react-dom": "16.8.4",
