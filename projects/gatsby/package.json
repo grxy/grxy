@@ -1,7 +1,7 @@
 {
     "name": "@grxy/gatsby",
     "description": "Gatsby default starter",
-    "version": "0.1.78",
+    "version": "0.1.79",
     "private": true,
     "dependencies": {
         "gatsby": "2.1.35",
