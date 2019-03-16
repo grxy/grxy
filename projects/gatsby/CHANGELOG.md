@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.80](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.79...@grxy/gatsby@0.1.80) (2019-03-16)
+
+### Bug Fixes
+
+-   **deps:** update dependency gatsby to v2.1.36 ([#323](https://github.com/grxy/grxy/tree/master/projects/gatsby/issues/323)) ([03d61c2](https://github.com/grxy/grxy/tree/master/projects/gatsby/commit/03d61c2))
+
 ## [0.1.79](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.78...@grxy/gatsby@0.1.79) (2019-03-15)
 
 ### Bug Fixes
