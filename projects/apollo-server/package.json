@@ -14,7 +14,7 @@
     },
     "devDependencies": {
         "@babel/cli": "7.2.3",
-        "@babel/core": "7.3.4",
+        "@babel/core": "7.4.0",
         "apollo": "2.6.2",
         "dotenv-cli": "2.0.0",
         "nodemon": "1.18.10",
