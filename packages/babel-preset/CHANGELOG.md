@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.6...@grxy/babel-preset@0.3.7) (2019-03-21)
+
+### Bug Fixes
+
+-   **deps:** update dependency @babel/preset-env to v7.4.2 ([#342](https://github.com/grxy/grxy/issues/342)) ([6262053](https://github.com/grxy/grxy/commit/6262053))
+
 ## [0.3.6](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.5...@grxy/babel-preset@0.3.6) (2019-03-20)
 
 ### Bug Fixes
