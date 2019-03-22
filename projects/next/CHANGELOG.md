@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.11](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.10...@grxy/next@0.10.11) (2019-03-22)
+
+### Bug Fixes
+
+-   **deps:** update react monorepo to v16.8.5 ([#348](https://github.com/grxy/grxy/tree/master/projects/next/issues/348)) ([abd01d7](https://github.com/grxy/grxy/tree/master/projects/next/commit/abd01d7))
+
 ## [0.10.10](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.9...@grxy/next@0.10.10) (2019-03-14)
 
 ### Bug Fixes
