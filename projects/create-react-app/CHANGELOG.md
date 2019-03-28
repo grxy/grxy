@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.23](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.22...@grxy/create-react-app@0.2.23) (2019-03-28)
+
+### Bug Fixes
+
+-   **deps:** update react monorepo to v16.8.6 ([#363](https://github.com/grxy/grxy/tree/master/projects/create-react-app/issues/363)) ([bc4ac7e](https://github.com/grxy/grxy/tree/master/projects/create-react-app/commit/bc4ac7e))
+
 ## [0.2.22](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.21...@grxy/create-react-app@0.2.22) (2019-03-22)
 
 ### Bug Fixes
