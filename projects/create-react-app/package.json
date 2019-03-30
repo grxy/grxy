@@ -1,6 +1,6 @@
 {
     "name": "@grxy/create-react-app",
-    "version": "0.2.23",
+    "version": "0.2.24",
     "private": true,
     "dependencies": {
         "react": "16.8.6",

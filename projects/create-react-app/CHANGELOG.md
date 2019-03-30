@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.24](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.23...@grxy/create-react-app@0.2.24) (2019-03-30)
+
+**Note:** Version bump only for package @grxy/create-react-app
+
 ## [0.2.23](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.22...@grxy/create-react-app@0.2.23) (2019-03-28)
 
 ### Bug Fixes
