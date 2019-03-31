@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.15](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.14...@grxy/next@0.10.15) (2019-03-31)
+
+### Bug Fixes
+
+-   **deps:** update dependency graphql to v14.2.1 ([#367](https://github.com/grxy/grxy/tree/master/projects/next/issues/367)) ([75adc64](https://github.com/grxy/grxy/tree/master/projects/next/commit/75adc64))
+
 ## [0.10.14](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.13...@grxy/next@0.10.14) (2019-03-28)
 
 ### Bug Fixes
