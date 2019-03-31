@@ -10,7 +10,7 @@
     "dependencies": {
         "apollo-server": "2.4.8",
         "dotenv": "7.0.0",
-        "graphql": "14.2.0"
+        "graphql": "14.2.1"
     },
     "devDependencies": {
         "@babel/cli": "7.2.3",
