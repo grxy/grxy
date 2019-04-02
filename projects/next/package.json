@@ -21,7 +21,7 @@
         "graphql-subscriptions": "1.0.0",
         "graphql-tag": "2.10.1",
         "isomorphic-fetch": "2.2.1",
-        "next": "8.0.3",
+        "next": "8.0.4",
         "react": "16.8.6",
         "react-apollo": "alpha",
         "react-dom": "16.8.6",
