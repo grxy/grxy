@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.32](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.31...@grxy/eslint-config@0.2.32) (2019-04-16)
+
+### Bug Fixes
+
+-   **deps:** update dependency eslint-plugin-import to v2.17.2 ([#419](https://github.com/grxy/grxy/issues/419)) ([b7d9a99](https://github.com/grxy/grxy/commit/b7d9a99))
+
 ## [0.2.31](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.30...@grxy/eslint-config@0.2.31) (2019-04-13)
 
 ### Bug Fixes
