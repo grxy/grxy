@@ -10,8 +10,8 @@
     "dependencies": {
         "@emotion/core": "10.0.10",
         "@emotion/styled": "10.0.10",
-        "apollo-cache-inmemory": "alpha",
-        "apollo-client": "alpha",
+        "apollo-cache-inmemory": "1.5.1",
+        "apollo-client": "2.5.1",
         "apollo-link": "1.2.11",
         "apollo-link-http": "1.5.14",
         "apollo-link-ws": "1.0.17",
@@ -23,7 +23,7 @@
         "isomorphic-fetch": "2.2.1",
         "next": "8.1.0",
         "react": "16.8.6",
-        "react-apollo": "alpha",
+        "react-apollo": "2.5.5",
         "react-dom": "16.8.6",
         "subscriptions-transport-ws": "0.9.16"
     },
