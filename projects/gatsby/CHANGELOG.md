@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.134](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.133...@grxy/gatsby@0.1.134) (2019-05-01)
+
+### Bug Fixes
+
+-   **deps:** update dependency react-helmet to v5.2.1 ([#453](https://github.com/grxy/grxy/tree/master/projects/gatsby/issues/453)) ([34c9c72](https://github.com/grxy/grxy/tree/master/projects/gatsby/commit/34c9c72))
+
 ## [0.1.133](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.132...@grxy/gatsby@0.1.133) (2019-04-30)
 
 ### Bug Fixes
