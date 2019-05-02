@@ -29,7 +29,7 @@
         "husky": "2.2.0",
         "jest": "24.7.1",
         "jest-emotion": "10.0.10",
-        "jest-junit": "6.3.0",
+        "jest-junit": "6.4.0",
         "lerna": "3.13.4",
         "lint-staged": "8.1.5",
         "now": "15.0.11",
