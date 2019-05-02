@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.41](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.40...@grxy/apollo-server@0.3.41) (2019-05-02)
+
+### Bug Fixes
+
+-   **deps:** update dependency dotenv to v8 ([#462](https://github.com/grxy/grxy/tree/master/projects/apollo-server/issues/462)) ([174a928](https://github.com/grxy/grxy/tree/master/projects/apollo-server/commit/174a928))
+
 ## [0.3.40](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.39...@grxy/apollo-server@0.3.40) (2019-05-01)
 
 **Note:** Version bump only for package @grxy/apollo-server
