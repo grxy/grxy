@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.42-alpha.0](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.40...@grxy/eslint-config@0.2.42-alpha.0) (2019-05-08)
+
+**Note:** Version bump only for package @grxy/eslint-config
+
 ## [0.2.40](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.39...@grxy/eslint-config@0.2.40) (2019-05-08)
 
 ### Bug Fixes
