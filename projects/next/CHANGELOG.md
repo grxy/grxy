@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0-alpha.6](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.12.0-alpha.5...@grxy/next@0.12.0-alpha.6) (2019-05-08)
+
+**Note:** Version bump only for package @grxy/next
+
 # [0.12.0-alpha.5](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.12.0-alpha.3...@grxy/next@0.12.0-alpha.5) (2019-05-08)
 
 **Note:** Version bump only for package @grxy/next

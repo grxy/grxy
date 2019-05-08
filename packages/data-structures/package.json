@@ -1,6 +1,6 @@
 {
     "name": "@grxy/data-structures",
-    "version": "0.4.0-alpha.5",
+    "version": "0.4.0-alpha.6",
     "description": "Data structures for practice",
     "main": "index.js",
     "author": "Grex",
