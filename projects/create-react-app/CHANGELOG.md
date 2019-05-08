@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0-alpha.3](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.4.0-alpha.2...@grxy/create-react-app@0.4.0-alpha.3) (2019-05-08)
+
+**Note:** Version bump only for package @grxy/create-react-app
+
 # [0.4.0-alpha.2](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.4.0-alpha.1...@grxy/create-react-app@0.4.0-alpha.2) (2019-05-08)
 
 **Note:** Version bump only for package @grxy/create-react-app
