@@ -1,6 +1,6 @@
 {
     "name": "@grxy/eslint-config",
-    "version": "0.2.40",
+    "version": "0.2.41-alpha.1+7a710d3",
     "description": "My custom eslint config",
     "main": "index.js",
     "author": "Grex",
@@ -23,5 +23,6 @@
     },
     "scripts": {
         "lint": "eslint ."
-    }
+    },
+    "gitHead": "7a710d30e4adaeaa349482afb197fbfd19ac8cad"
 }

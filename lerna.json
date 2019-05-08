@@ -1,7 +1,7 @@
 {
     "command": {
         "publish": {
-            "allowBranch": "master",
+            "allowBranch": ["master", "features/lerna-test"],
             "ignoreChanges": ["*.md"],
             "message": "chore(release): publish [skip ci]"
         }
