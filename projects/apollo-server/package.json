@@ -1,6 +1,6 @@
 {
     "name": "@grxy/apollo-server",
-    "version": "0.3.47",
+    "version": "0.3.48",
     "description": "Sandbox for testing ApolloServer",
     "main": "src/index.js",
     "repository": "https://github.com/grxy/grxy/tree/master/projects/apollo-server",
