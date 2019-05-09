@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.21](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.20...@grxy/next@0.10.21) (2019-05-09)
+
+### Bug Fixes
+
+-   **deps:** update emotion monorepo to v10.0.11 ([#479](https://github.com/grxy/grxy/tree/master/projects/next/issues/479)) ([7cf9b1d](https://github.com/grxy/grxy/tree/master/projects/next/commit/7cf9b1d))
+
 ## [0.10.20](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.19...@grxy/next@0.10.20) (2019-05-07)
 
 ### Bug Fixes
