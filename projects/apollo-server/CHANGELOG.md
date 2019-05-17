@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.51](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.50...@grxy/apollo-server@0.3.51) (2019-05-17)
+
+### Bug Fixes
+
+-   **deps:** update dependency @graphql-modules/core to v0.7.2 ([#500](https://github.com/grxy/grxy/tree/master/projects/apollo-server/issues/500)) ([1ab168c](https://github.com/grxy/grxy/tree/master/projects/apollo-server/commit/1ab168c))
+
 ## [0.3.50](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.49...@grxy/apollo-server@0.3.50) (2019-05-17)
 
 **Note:** Version bump only for package @grxy/apollo-server
