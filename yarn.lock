@@ -2470,21 +2470,21 @@
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
-"@graphql-modules/core@0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@graphql-modules/core/-/core-0.7.2.tgz#076786ebb8ef27905c0322eed247743d96d3977a"
-  integrity sha512-HUvQN6YSR1Wxd05JcEuqT9xyRoFaNlKhYlolXc7fEWd/6gjEHfjedEzWkDg4HmVmimFMvhUbJ3gsi3JmOtl15A==
+"@graphql-modules/core@0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@graphql-modules/core/-/core-0.7.3.tgz#d83328b7608a3f69f803faceacc8736c84775624"
+  integrity sha512-XMvZZcow7tUA6jqkCaf7oMmL6Mp1ohFXxplON/7JmT1r2847py+6Dh2TsBHmYzlwVWonJ4XXHOLIXnyUh+xF6A==
   dependencies:
-    "@graphql-modules/di" "0.7.2"
+    "@graphql-modules/di" "0.7.3"
     apollo-server-caching "0.4.0"
-    graphql-toolkit "0.2.11"
+    graphql-toolkit "0.2.12"
     graphql-tools "4.0.4"
     tslib "1.9.3"
 
-"@graphql-modules/di@0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@graphql-modules/di/-/di-0.7.2.tgz#df88c9e6a7ced8072392c6e504f2a4fc8aa05b84"
-  integrity sha512-vY9I2a9BBVlVssLgE727Ot8GIM2EcPGEY6gNZxip51LZHBodLVJ/MbwDJm7iLLQJsCqmglfsx01wsR1EDfYv4w==
+"@graphql-modules/di@0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@graphql-modules/di/-/di-0.7.3.tgz#3ccd7264d67c0242040616c5441404b6f65a293c"
+  integrity sha512-rae6YVCZdoaI7NgaxLzAYvK1DftFE39DZNqOcWlFfoJbnwE6etdvfal5jS7QVJoWpx4CaA8zKq0Bt3KYkxBS9A==
   dependencies:
     events "3.0.0"
     tslib "1.9.3"
@@ -12765,10 +12765,10 @@ graphql-tag@^2.9.2:
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.10.0.tgz#87da024be863e357551b2b8700e496ee2d4353ae"
   integrity sha512-9FD6cw976TLLf9WYIUPCaaTpniawIjHWZSwIRZSjrfufJamcXbVVYfN2TWvJYbw0Xf2JjYbl1/f2+wDnBVw3/w==
 
-graphql-toolkit@0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/graphql-toolkit/-/graphql-toolkit-0.2.11.tgz#4849349d9a0c6689b7c8d635f553793940fa6149"
-  integrity sha512-8iR9XFKe9fcZ0Q4rakrVIgM+vXbe3HnkeppdHn9CxwT/0rRXZE6CFFRm4UD0cocrA5ibkrxsajlDta8M6cRbpw==
+graphql-toolkit@0.2.12:
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/graphql-toolkit/-/graphql-toolkit-0.2.12.tgz#a8a7e23c871508e7bfd861e4940129882e820b20"
+  integrity sha512-wVBJc3t5quWrABw60Rm8cwRhdIvDR1aaU4S1X877EdB55X1tgueQ65k5GUw/B+5ZrHCSGUP5cPCGsnfrspCFDw==
   dependencies:
     aggregate-error "2.2.0"
     asyncro "^3.0.0"
