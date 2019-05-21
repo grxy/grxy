@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.22](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.21...@grxy/next@0.10.22) (2019-05-21)
+
+### Bug Fixes
+
+-   **deps:** update apollo graphql packages ([#513](https://github.com/grxy/grxy/tree/master/projects/next/issues/513)) ([de8af17](https://github.com/grxy/grxy/tree/master/projects/next/commit/de8af17))
+
 ## [0.10.21](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.20...@grxy/next@0.10.21) (2019-05-09)
 
 ### Bug Fixes
