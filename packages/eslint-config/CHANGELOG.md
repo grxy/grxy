@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.48](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.47...@grxy/eslint-config@0.2.48) (2019-05-23)
+
+### Bug Fixes
+
+-   **deps:** update dependency eslint-plugin-flowtype to v3.9.1 ([#522](https://github.com/grxy/grxy/issues/522)) ([84c5f74](https://github.com/grxy/grxy/commit/84c5f74))
+
 ## [0.2.47](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.46...@grxy/eslint-config@0.2.47) (2019-05-23)
 
 ### Bug Fixes
