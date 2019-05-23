@@ -8,7 +8,7 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "@graphql-modules/core": "0.7.3",
+        "@graphql-modules/core": "0.7.4",
         "apollo-server": "2.5.0",
         "dotenv": "8.0.0",
         "graphql": "14.3.0"
