@@ -106,7 +106,7 @@
         ]
     },
     "renovate": {
-        "automerge": true,
+        "automerge": false,
         "extends": [
             "config:base"
         ]
