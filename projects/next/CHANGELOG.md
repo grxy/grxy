@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.28](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.27...@grxy/next@0.10.28) (2019-06-14)
+
+### Bug Fixes
+
+-   **deps:** update dependency deepmerge to v3.2.1 ([#582](https://github.com/grxy/grxy/tree/master/projects/next/issues/582)) ([bbb9215](https://github.com/grxy/grxy/tree/master/projects/next/commit/bbb9215))
+
 ## [0.10.27](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.26...@grxy/next@0.10.27) (2019-06-09)
 
 ### Bug Fixes
