@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.60](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.59...@grxy/eslint-config@0.2.60) (2019-06-17)
+
+### Bug Fixes
+
+-   **deps:** update dependency babel-eslint to v10.0.2 ([#587](https://github.com/grxy/grxy/issues/587)) ([fbf1486](https://github.com/grxy/grxy/commit/fbf1486))
+
 ## [0.2.59](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.58...@grxy/eslint-config@0.2.59) (2019-06-17)
 
 ### Bug Fixes
