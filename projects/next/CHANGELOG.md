@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.30](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.29...@grxy/next@0.10.30) (2019-06-18)
+
+### Bug Fixes
+
+-   **deps:** update dependency apollo-client to v2.6.3 ([#588](https://github.com/grxy/grxy/tree/master/projects/next/issues/588)) ([2d61a8b](https://github.com/grxy/grxy/tree/master/projects/next/commit/2d61a8b))
+
 ## [0.10.29](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.28...@grxy/next@0.10.29) (2019-06-14)
 
 ### Bug Fixes
