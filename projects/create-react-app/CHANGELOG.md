@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.27](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.26...@grxy/create-react-app@0.2.27) (2019-06-19)
+
+### Bug Fixes
+
+-   **deps:** update dependency serve to v11.0.2 ([#591](https://github.com/grxy/grxy/tree/master/projects/create-react-app/issues/591)) ([2390195](https://github.com/grxy/grxy/tree/master/projects/create-react-app/commit/2390195))
+
 ## [0.2.26](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.25...@grxy/create-react-app@0.2.26) (2019-05-28)
 
 **Note:** Version bump only for package @grxy/create-react-app
