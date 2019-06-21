@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.32](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.31...@grxy/next@0.10.32) (2019-06-21)
+
+### Bug Fixes
+
+-   **deps:** update dependency react-apollo to v2.5.7 ([#601](https://github.com/grxy/grxy/tree/master/projects/next/issues/601)) ([acb1d03](https://github.com/grxy/grxy/tree/master/projects/next/commit/acb1d03))
+
 ## [0.10.31](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.30...@grxy/next@0.10.31) (2019-06-20)
 
 ### Bug Fixes
