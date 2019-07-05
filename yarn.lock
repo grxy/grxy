@@ -9275,10 +9275,10 @@ damerau-levenshtein@^1.0.4:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.4.tgz#03191c432cb6eea168bb77f3a55ffdccb8978514"
   integrity sha1-AxkcQyy27qFou3fzpV/9zLiXhRQ=
 
-danger@8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/danger/-/danger-8.0.0.tgz#9809d17e6213c05c3cc2c4e0573f707acc3f5402"
-  integrity sha512-S3Q9ukawJUxA2SRlfzLtP/WzGr2jiKqkRi3pX/Scbfm0nLh/KNQLMsdgYHhJwECCe5Vt69iy7b2zMMga4rFNrQ==
+danger@9.0.3:
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/danger/-/danger-9.0.3.tgz#9e784c9f725a09db438dbc5450ffdba10263a052"
+  integrity sha512-OwJLxMj5Lmt9gevhLs5P9npj4sAvE4lkaYpOOW6xTCfDFXj/2GMNDnzAUeI0eBcLzD6nKAgpyVY1bVah/0aFig==
   dependencies:
     "@babel/polyfill" "^7.2.5"
     "@octokit/rest" "^16.14.1"
@@ -9286,7 +9286,7 @@ danger@8.0.0:
     commander "^2.18.0"
     debug "^4.1.1"
     get-stdin "^6.0.0"
-    gitlab "^6.0.0"
+    gitlab "~6.0.0"
     http-proxy-agent "^2.1.0"
     https-proxy-agent "^2.2.1"
     hyperlinker "^1.0.0"
@@ -12509,7 +12509,7 @@ github-from-package@0.0.0:
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
   integrity sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=
 
-gitlab@^6.0.0:
+gitlab@~6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/gitlab/-/gitlab-6.0.0.tgz#7bd44bf57dcb6b1231c70a52ea9b83934e6c1539"
   integrity sha512-/0KE/Un0Hg/CDTtiYfC1Z4lkuHhkSmC3JjkKy4VsCgTb51rTtOfk7NGspyM+wTIgEPd6cE061Pu5m4a5ao01Ow==
