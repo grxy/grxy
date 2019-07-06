@@ -14,9 +14,6 @@
         ]
     },
     "devDependencies": {
-        "@storybook/addon-knobs": "5.1.9",
-        "@storybook/react": "5.1.9",
-        "babel-core": "7.0.0-bridge.0",
         "babel-jest": "24.8.0",
         "core-js": "3.1.4",
         "cypress": "3.3.2",
@@ -144,7 +141,7 @@
         "prettier": "prettier-eslint '**/*.{graphql,json,md,yml}' --list-different",
         "release": "lerna publish --conventional-commits --github-release --yes",
         "start": "yarn compose:prod up --build",
-        "storybook": "start-storybook -p 9001 -c .storybook",
+        "storybook": "start-storybook -p 9001 -c ./packages/storybook",
         "test": "jest",
         "test:integration": "CYPRESS_baseUrl=http://localhost:3000 yarn cypress run"
     }

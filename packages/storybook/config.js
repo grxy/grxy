@@ -9,8 +9,8 @@ function loadStories() {
         r.keys().forEach(r)
     }
 
-    importAll(require.context('../packages', true, /.stories.js$/))
-    importAll(require.context('../projects', true, /.stories.js$/))
+    importAll(require.context('../../packages', true, /.stories.js$/))
+    importAll(require.context('../../projects', true, /.stories.js$/))
 }
 
 configure(loadStories, module)

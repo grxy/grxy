@@ -1,0 +1,17 @@
+{
+    "name": "@grxy/storybook",
+    "version": "0.0.0",
+    "description": "My storybook config",
+    "main": "index.js",
+    "author": "Grex",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@babel/core": "7.5.0",
+        "@grxy/babel-preset": "0.3.12",
+        "@storybook/addon-knobs": "5.1.9",
+        "@storybook/react": "5.1.9",
+        "babel-loader": "8.0.6",
+        "webpack": "4.35.2"
+    }
+}
