@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.178](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.177...@grxy/gatsby@0.1.178) (2019-07-06)
+
+**Note:** Version bump only for package @grxy/gatsby
+
+
+
+
+
 ## [0.1.177](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.176...@grxy/gatsby@0.1.177) (2019-06-21)
 
 ### Bug Fixes
