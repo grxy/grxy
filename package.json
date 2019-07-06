@@ -106,9 +106,23 @@
         ]
     },
     "renovate": {
-        "automerge": true,
         "extends": [
             "config:base"
+        ],
+        "labels": [
+            "dependencies"
+        ],
+        "packageRules": [
+            {
+                "packagePatterns": [
+                    "*"
+                ],
+                "minor": {
+                    "automerge": true,
+                    "groupName": "all non-major dependencies",
+                    "groupSlug": "all-minor-patch"
+                }
+            }
         ]
     },
     "scripts": {
