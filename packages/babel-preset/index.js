@@ -23,7 +23,7 @@ module.exports = () => ({
         '@babel/plugin-proposal-object-rest-spread',
     ],
     presets: [
-        ['@babel/preset-env', { useBuiltIns: 'usage' }],
+        ['@babel/preset-env', { corejs: 3, useBuiltIns: 'usage' }],
         '@babel/preset-react',
     ],
 })

@@ -1,3 +1,5 @@
+/* eslint react/prop-types: warn */
+
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming'
 import React, { useState } from 'react'
 

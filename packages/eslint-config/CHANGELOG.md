@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @grxy/eslint-config
 
-
-
-
-
 ## [0.2.66](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.65...@grxy/eslint-config@0.2.66) (2019-06-23)
 
 ### Bug Fixes

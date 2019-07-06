@@ -1,3 +1,5 @@
+/* eslint react/prop-types: warn */
+
 import React from 'react'
 import initApollo from './init-apollo'
 import Head from 'next/head'
