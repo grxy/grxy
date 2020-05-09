@@ -36,6 +36,8 @@ orbs:
             node:
                 docker:
                     - image: circleci/node:12-browsers
+                environment:
+                    - CYPRESS_CACHE_FOLDER: ~/.cache/Cypress
 
 jobs:
     alias:
