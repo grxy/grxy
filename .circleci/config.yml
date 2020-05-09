@@ -98,15 +98,17 @@ workflows:
             #           - deploy
             #           - release
             # - build
-            - cypress/install:
-                  build: 'yarn workspace @grxy/next build'
-                  executor: cypress/base-12
-                  yarn: true
             - cypress/run:
+                  build: 'yarn workspace @grxy/next build'
+                  command: 'yarn cypress run'
                   executor: cypress/base-12
-                  requires:
-                      - cypress/install
+                  install-command: 'yarn --frozen-lockfile'
+                  post-install:
+                      - run: 'yarn cypress install'
                   start: 'yarn workspace @grxy/next start'
+                  verify-command: 'yarn cypress verify'
+                  wait-on: 'http://localhost:3000'
+                  yarn: true
             - danger
             # - deploy
             - lint
