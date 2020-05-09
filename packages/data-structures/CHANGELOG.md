@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.2.1](https://github.com/grxy/grxy/compare/@grxy/data-structures@0.2.0...@grxy/data-structures@0.2.1) (2020-05-09)
 
-
 ### Bug Fixes
 
-* linting works again ([#660](https://github.com/grxy/grxy/issues/660)) ([4ba1356](https://github.com/grxy/grxy/commit/4ba1356b71442317a6939e171930ae953afc496a))
-
-
-
-
+-   linting works again ([#660](https://github.com/grxy/grxy/issues/660)) ([4ba1356](https://github.com/grxy/grxy/commit/4ba1356b71442317a6939e171930ae953afc496a))
 
 # [0.2.0](https://github.com/grxy/grxy/compare/@grxy/data-structures@0.1.0...@grxy/data-structures@0.2.0) (2019-01-26)
 

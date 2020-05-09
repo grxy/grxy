@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.2.69](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.68...@grxy/eslint-config@0.2.69) (2020-05-09)
 
-
 ### Bug Fixes
 
-* linting works again ([#660](https://github.com/grxy/grxy/issues/660)) ([4ba1356](https://github.com/grxy/grxy/commit/4ba1356b71442317a6939e171930ae953afc496a))
-
-
-
-
+-   linting works again ([#660](https://github.com/grxy/grxy/issues/660)) ([4ba1356](https://github.com/grxy/grxy/commit/4ba1356b71442317a6939e171930ae953afc496a))
 
 ## [0.2.68](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.67...@grxy/eslint-config@0.2.68) (2019-07-06)
 

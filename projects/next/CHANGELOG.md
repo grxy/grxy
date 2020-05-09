@@ -5,14 +5,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.10.35](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.34...@grxy/next@0.10.35) (2020-05-09)
 
-
 ### Bug Fixes
 
-* linting works again ([#660](https://github.com/grxy/grxy/tree/master/projects/next/issues/660)) ([4ba1356](https://github.com/grxy/grxy/tree/master/projects/next/commit/4ba1356b71442317a6939e171930ae953afc496a))
-
-
-
-
+-   linting works again ([#660](https://github.com/grxy/grxy/tree/master/projects/next/issues/660)) ([4ba1356](https://github.com/grxy/grxy/tree/master/projects/next/commit/4ba1356b71442317a6939e171930ae953afc496a))
 
 ## [0.10.34](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.33...@grxy/next@0.10.34) (2019-07-06)
 
