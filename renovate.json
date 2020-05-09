@@ -10,7 +10,6 @@
         ":masterIssueApproval",
         ":pinAllExceptPeerDependencies",
         ":prImmediately",
-        ":rebaseStalePrs",
         ":renovatePrefix",
         ":respectLatest",
         ":semanticCommits",
@@ -19,5 +18,6 @@
         ":unpublishSafe",
         ":updateNotScheduled",
         "group:all"
-    ]
+    ],
+    "rebaseWhen": "conflicted"
 }
