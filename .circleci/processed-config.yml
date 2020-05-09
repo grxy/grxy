@@ -1,0 +1,300 @@
+version: 2
+jobs:
+  alias:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - checkout
+    - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+    - run:
+        command: yarn --frozen-lockfile
+    - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+        - ~/.cache/yarn
+    - run:
+        command: yarn --silent now alias --token=$NOW_TOKEN
+  danger:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - checkout
+    - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+    - run:
+        command: yarn --frozen-lockfile
+    - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+        - ~/.cache/yarn
+    - run:
+        command: yarn danger ci
+  deploy:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - checkout
+    - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+    - run:
+        command: yarn --frozen-lockfile
+    - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+        - ~/.cache/yarn
+    - run:
+        command: yarn --silent now --token=$NOW_TOKEN
+    - run:
+        command: yarn --silent now --token=$NOW_TOKEN alias grxy-$CIRCLE_SHA1.now.sh
+  lint:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - checkout
+    - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+    - run:
+        command: yarn --frozen-lockfile
+    - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+        - ~/.cache/yarn
+    - run:
+        command: yarn lint
+  release:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - checkout
+    - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+    - run:
+        command: yarn --frozen-lockfile
+    - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+        - ~/.cache/yarn
+    - checkout
+    - run:
+        command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+    - run:
+        command: git config --global user.email "andrew@grexa.me"
+    - run:
+        command: git config --global user.name "Grex"
+    - run:
+        command: yarn release
+  test:
+    docker:
+    - image: circleci/node:12
+    steps:
+    - checkout
+    - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+    - run:
+        command: yarn --frozen-lockfile
+    - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+        - ~/.cache/yarn
+    - run:
+        command: yarn test --ci --reporters=default --reporters=jest-junit --no-cache
+        environment:
+          JEST_JUNIT_OUTPUT: reports/jest/results.xml
+    - store_test_results:
+        path: reports
+  test-integration:
+    docker:
+    - image: cypress/browsers:chrome67-ff57
+    steps:
+    - checkout
+    - restore_cache:
+        name: Restore Yarn Package Cache
+        keys:
+        - yarn-packages-{{ checksum "yarn.lock" }}
+    - run:
+        command: yarn --frozen-lockfile
+    - save_cache:
+        name: Save Yarn Package Cache
+        key: yarn-packages-{{ checksum "yarn.lock" }}
+        paths:
+        - ~/.cache/yarn
+    - run:
+        command: yarn cypress install
+    - run:
+        command: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run
+workflows:
+  version: 2
+  build:
+    jobs:
+    - alias:
+        filters:
+          branches:
+            only: master
+        requires:
+        - deploy
+        - release
+    - danger
+    - deploy
+    - lint
+    - release:
+        filters:
+          branches:
+            only: master
+        requires:
+        - lint
+        - test
+        - test-integration
+    - test
+    - test-integration:
+        requires:
+        - deploy
+
+# Original config.yml file:
+# version: 2.1
+# 
+# defaults: &defaults
+#     docker:
+#         - image: circleci/node:12
+# 
+# master: &master
+#     filters:
+#         branches:
+#             only: master
+# 
+# orbs:
+#     grxy:
+#         commands:
+#             install:
+#                 steps:
+#                     - checkout
+#                     - restore_cache:
+#                         name: Restore Yarn Package Cache
+#                         keys:
+#                             - yarn-packages-{{ checksum \"yarn.lock\" }}
+#                     - run: yarn --frozen-lockfile
+#                     - save_cache:
+#                         name: Save Yarn Package Cache
+#                         key: yarn-packages-{{ checksum \"yarn.lock\" }}
+#                         paths:
+#                             - ~/.cache/yarn
+# 
+# jobs:
+#     # install:
+#     #     <<: *defaults
+#     #     steps:
+#     #         - grxy/install
+#     alias:
+#         <<: *defaults
+#         steps:
+#             - grxy/install
+#             - run: yarn --silent now alias --token=$NOW_TOKEN
+#     build:
+#         <<: *defaults
+#         steps:
+#             - grxy/install
+#             - setup_remote_docker:
+#                   docker_layer_caching: true
+#             - run: echo \"SKIP_PREFLIGHT_CHECK=true\" > ./projects/create-react-app/.env
+#             - run: yarn build
+#     danger:
+#         <<: *defaults
+#         steps:
+#             - grxy/install
+#             - run: yarn danger ci
+#     deploy:
+#         <<: *defaults
+#         steps:
+#             - grxy/install
+#             - run: yarn --silent now --token=$NOW_TOKEN
+#             - run: yarn --silent now --token=$NOW_TOKEN alias grxy-$CIRCLE_SHA1.now.sh
+#     lint:
+#         <<: *defaults
+#         steps:
+#             - grxy/install
+#             - run: yarn lint
+#     release:
+#         <<: *defaults
+#         steps:
+#             - grxy/install
+#             - checkout
+#             - run: echo \"//registry.npmjs.org/:_authToken=$NPM_TOKEN\" > .npmrc
+#             - run: git config --global user.email \"andrew@grexa.me\"
+#             - run: git config --global user.name \"Grex\"
+#             - run: yarn release
+#     test:
+#         <<: *defaults
+#         steps:
+#             - grxy/install
+#             - run:
+#                   command: yarn test --ci --reporters=default --reporters=jest-junit --no-cache
+#                   environment:
+#                       JEST_JUNIT_OUTPUT: 'reports/jest/results.xml'
+#             - store_test_results:
+#                   path: reports
+#     test-integration:
+#         docker:
+#             - image: cypress/browsers:chrome67-ff57
+#         steps:
+#             - grxy/install
+#             - run: yarn cypress install
+#             - run: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run
+# 
+# workflows:
+#     version: 2
+#     build:
+#         jobs:
+#             # - build:
+#             #       requires:
+#             #           - install
+#             - alias:
+#                   <<: *master
+#                   requires:
+#                       - deploy
+#                       - release
+#             - danger
+#             # - danger:
+#             #       requires:
+#             #           - install
+#             - deploy
+#             # - deploy:
+#             #       requires:
+#             #           - install
+#             # - install
+#             - lint
+#             # - lint:
+#             #       requires:
+#             #           - install
+#             - release:
+#                   <<: *master
+#                   requires:
+#                       #   - build
+#                     #   - install
+#                       - lint
+#                       - test
+#                       - test-integration
+#             - test
+#             # - test:
+#             #       requires:
+#             #           - install
+#             - test-integration:
+#                   requires:
+#                       - deploy
