@@ -1,7 +1,6 @@
 {
     "extends": [
         ":automergeAll",
-        ":combinePatchMinorReleases",
         ":disableRateLimiting",
         ":enableVulnerabilityAlerts",
         ":ignoreModulesAndTests",
@@ -11,7 +10,6 @@
         ":masterIssueApproval",
         ":pinAllExceptPeerDependencies",
         ":prImmediately",
-        ":rebaseStalePrs",
         ":renovatePrefix",
         ":respectLatest",
         ":semanticCommits",
@@ -19,7 +17,7 @@
         ":separateMajorReleases",
         ":unpublishSafe",
         ":updateNotScheduled",
-        "group:monorepos",
-        "group:recommended"
-    ]
+        "group:all"
+    ],
+    "rebaseWhen": "conflicted"
 }
