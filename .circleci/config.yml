@@ -99,17 +99,17 @@ workflows:
             # - build:
             #       requires:
             #           - install
-            - alias:
-                  <<: *master
-                  requires:
-                      - deploy
-                      - release
+            # - alias:
+            #       <<: *master
+            #       requires:
+            #           - deploy
+            #           - release
             - danger:
                   requires:
                       - install
-            - deploy:
-                  requires:
-                      - install
+            # - deploy:
+            #       requires:
+            #           - install
             - install
             - lint:
                   requires:
@@ -121,10 +121,10 @@ workflows:
                       - install
                       - lint
                       - test
-                      - test-integration
+                      #   - test-integration
             - test:
                   requires:
                       - install
-            - test-integration:
-                  requires:
-                      - deploy
+            # - test-integration:
+            #       requires:
+            #           - deploy
