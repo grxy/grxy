@@ -1,8 +1,7 @@
 version: 2.1
 
 defaults: &defaults
-    docker:
-        - image: circleci/node:12
+    executor: grxy/node
 
 master: &master
     filters:
@@ -113,7 +112,7 @@ workflows:
                   build: 'yarn workspace @grxy/next build'
                   cache-key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                   command: 'CYPRESS_baseUrl=http://localhost:3000 yarn cypress run'
-                  executor: cypress/base-12
+                  executor: grxy/node
                   install-command: 'yarn --frozen-lockfile'
                   post-install:
                       - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir
