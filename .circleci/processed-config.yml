@@ -1,23 +1,64 @@
+# Orb 'cypress-io/cypress@1' resolved to 'cypress-io/cypress@1.21.0'
 version: 2
 jobs:
-  alias:
+  cypress/run:
     docker:
-    - image: circleci/node:12
+    - image: cypress/base:12.16.1
+    parallelism: 1
+    environment:
+    - CYPRESS_CACHE_FOLDER: ~/.cache/Cypress
     steps:
+    - run:
+        command: echo "Assuming dependencies were installed using cypress/install job"
+    - attach_workspace:
+        at: ~/
     - checkout
     - restore_cache:
-        name: Restore Yarn Package Cache
         keys:
-        - yarn-packages-{{ checksum "yarn.lock" }}
+        - cache-{{ arch }}-{{ .Branch }}-{{ checksum "package.json" }}
     - run:
-        command: yarn --frozen-lockfile
+        name: Install
+        working_directory: ''
+        command: |
+          if [[ ! -z "yarn install --frozen-lockfile" ]]; then
+            echo "Installing using custom command"
+            echo "yarn install --frozen-lockfile"
+            yarn install --frozen-lockfile
+          elif [ "true" = "true" ]; then
+            echo "Installing using Yarn"
+            yarn install --frozen-lockfile
+          elif [ ! -e ./package-lock.json ]; then
+            echo "The Cypress orb uses 'npm ci' to install 'node_modules', which requires a 'package-lock.json'."
+            echo "A 'package-lock.json' file was not found. Please run 'npm install' in your project,"
+            echo "and commit 'package-lock.json' to your repo."
+            exit 1
+          else
+            echo "Installing dependencies using NPM ci"
+            npm ci
+          fi
+    - run:
+        name: Verify Cypress
+        command: npx cypress verify
+        working_directory: ''
     - save_cache:
-        name: Save Yarn Package Cache
-        key: yarn-packages-{{ checksum "yarn.lock" }}
+        key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "package.json" }}
         paths:
-        - ~/.cache/yarn
+        - ~/.cache
+    - persist_to_workspace:
+        root: ~/
+        paths:
+        - project
+        - .cache/Cypress
     - run:
-        command: yarn --silent now alias --token=$NOW_TOKEN
+        name: Start
+        command: yarn workspace @grxy/next start
+        background: true
+        working_directory: ''
+    - run:
+        name: Run Cypress tests
+        no_output_timeout: 10m
+        command: "npx cypress run \\\n   \\\n   \\\n   \\\n  "
+        working_directory: ''
   danger:
     docker:
     - image: circleci/node:12
@@ -36,26 +77,6 @@ jobs:
         - ~/.cache/yarn
     - run:
         command: yarn danger ci
-  deploy:
-    docker:
-    - image: circleci/node:12
-    steps:
-    - checkout
-    - restore_cache:
-        name: Restore Yarn Package Cache
-        keys:
-        - yarn-packages-{{ checksum "yarn.lock" }}
-    - run:
-        command: yarn --frozen-lockfile
-    - save_cache:
-        name: Save Yarn Package Cache
-        key: yarn-packages-{{ checksum "yarn.lock" }}
-        paths:
-        - ~/.cache/yarn
-    - run:
-        command: yarn --silent now --token=$NOW_TOKEN
-    - run:
-        command: yarn --silent now --token=$NOW_TOKEN alias grxy-$CIRCLE_SHA1.now.sh
   lint:
     docker:
     - image: circleci/node:12
@@ -121,39 +142,12 @@ jobs:
           JEST_JUNIT_OUTPUT: reports/jest/results.xml
     - store_test_results:
         path: reports
-  test-integration:
-    docker:
-    - image: cypress/browsers:chrome67-ff57
-    steps:
-    - checkout
-    - restore_cache:
-        name: Restore Yarn Package Cache
-        keys:
-        - yarn-packages-{{ checksum "yarn.lock" }}
-    - run:
-        command: yarn --frozen-lockfile
-    - save_cache:
-        name: Save Yarn Package Cache
-        key: yarn-packages-{{ checksum "yarn.lock" }}
-        paths:
-        - ~/.cache/yarn
-    - run:
-        command: yarn cypress install
-    - run:
-        command: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run
 workflows:
   version: 2
   build:
     jobs:
-    - alias:
-        filters:
-          branches:
-            only: master
-        requires:
-        - deploy
-        - release
+    - cypress/run
     - danger
-    - deploy
     - lint
     - release:
         filters:
@@ -162,11 +156,7 @@ workflows:
         requires:
         - lint
         - test
-        - test-integration
     - test
-    - test-integration:
-        requires:
-        - deploy
 
 # Original config.yml file:
 # version: 2.1
@@ -181,27 +171,28 @@ workflows:
 #             only: master
 # 
 # orbs:
+#     cypress: cypress-io/cypress@1
 #     grxy:
 #         commands:
 #             install:
 #                 steps:
 #                     - checkout
 #                     - restore_cache:
-#                         name: Restore Yarn Package Cache
-#                         keys:
-#                             - yarn-packages-{{ checksum \"yarn.lock\" }}
+#                           name: Restore Yarn Package Cache
+#                           keys:
+#                               - yarn-packages-{{ checksum \"yarn.lock\" }}
 #                     - run: yarn --frozen-lockfile
 #                     - save_cache:
-#                         name: Save Yarn Package Cache
-#                         key: yarn-packages-{{ checksum \"yarn.lock\" }}
-#                         paths:
-#                             - ~/.cache/yarn
+#                           name: Save Yarn Package Cache
+#                           key: yarn-packages-{{ checksum \"yarn.lock\" }}
+#                           paths:
+#                               - ~/.cache/yarn
+#         executors:
+#             node:
+#                 docker:
+#                     - image: circleci/node:12
 # 
 # jobs:
-#     # install:
-#     #     <<: *defaults
-#     #     steps:
-#     #         - grxy/install
 #     alias:
 #         <<: *defaults
 #         steps:
@@ -251,50 +242,42 @@ workflows:
 #             - store_test_results:
 #                   path: reports
 #     test-integration:
-#         docker:
-#             - image: cypress/browsers:chrome67-ff57
-#         steps:
-#             - grxy/install
-#             - run: yarn cypress install
-#             - run: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run
+#         # docker:
+#         #     - image: cypress/browsers:chrome67-ff57
+#         # steps:
+#         #     - grxy/install
+#         #     - run: yarn cypress install
+#         #     - run: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run
+# 
 # 
 # workflows:
 #     version: 2
 #     build:
 #         jobs:
-#             # - build:
+#             # - alias:
+#             #       <<: *master
 #             #       requires:
-#             #           - install
-#             - alias:
-#                   <<: *master
-#                   requires:
-#                       - deploy
-#                       - release
+#             #           - deploy
+#             #           - release
+#             # - build
+#             - cypress/run:
+#                 executor: cypress/base-12
+#                 install-command: yarn install --frozen-lockfile
+#                 # requires: cypress/install
+#                 start: 'yarn workspace @grxy/next start'
+#                 yarn: true
 #             - danger
-#             # - danger:
-#             #       requires:
-#             #           - install
-#             - deploy
-#             # - deploy:
-#             #       requires:
-#             #           - install
-#             # - install
+#             # - deploy
 #             - lint
-#             # - lint:
-#             #       requires:
-#             #           - install
 #             - release:
 #                   <<: *master
 #                   requires:
 #                       #   - build
-#                     #   - install
 #                       - lint
 #                       - test
-#                       - test-integration
+#                       #   - test-integration
 #             - test
-#             # - test:
+#             # - test-integration
+#             # - test-integration:
 #             #       requires:
-#             #           - install
-#             - test-integration:
-#                   requires:
-#                       - deploy
+#             #           - deploy

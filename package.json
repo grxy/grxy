@@ -41,6 +41,7 @@
     },
     "scripts": {
         "build": "yarn compose:prod build",
+        "circle:execute": "circleci config process ./.circleci/config.yml > .circleci/processed-config.yml && circleci local execute -c .circleci/processed-config.yml --job",
         "clean": "run-p clean:packages clean:projects clean:root",
         "clean:packages": "rm -rf packages/*/node_modules",
         "clean:projects": "rm -rf projects/*/node_modules",

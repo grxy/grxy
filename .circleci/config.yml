@@ -9,36 +9,38 @@ master: &master
         branches:
             only: master
 
+orbs:
+    cypress: cypress-io/cypress@1
+    grxy:
+        commands:
+            install:
+                steps:
+                    - checkout
+                    - restore_cache:
+                          name: Restore Yarn Package Cache
+                          keys:
+                              - yarn-packages-{{ checksum "yarn.lock" }}
+                    - run: yarn --frozen-lockfile
+                    - save_cache:
+                          name: Save Yarn Package Cache
+                          key: yarn-packages-{{ checksum "yarn.lock" }}
+                          paths:
+                              - ~/.cache/yarn
+        executors:
+            node:
+                docker:
+                    - image: circleci/node:12
+
 jobs:
-    install:
-        <<: *defaults
-        steps:
-            - checkout
-            - restore_cache:
-                  name: Restore Yarn Package Cache
-                  keys:
-                      - yarn-packages-{{ checksum "yarn.lock" }}
-            - run: yarn --frozen-lockfile
-            - save_cache:
-                  name: Save Yarn Package Cache
-                  key: yarn-packages-{{ checksum "yarn.lock" }}
-                  paths:
-                      - ~/.cache/yarn
-            - persist_to_workspace:
-                  root: .
-                  paths:
-                      - .
     alias:
         <<: *defaults
         steps:
-            - attach_workspace:
-                  at: .
+            - grxy/install
             - run: yarn --silent now alias --token=$NOW_TOKEN
     build:
         <<: *defaults
         steps:
-            - attach_workspace:
-                  at: .
+            - grxy/install
             - setup_remote_docker:
                   docker_layer_caching: true
             - run: echo "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
@@ -46,27 +48,23 @@ jobs:
     danger:
         <<: *defaults
         steps:
-            - attach_workspace:
-                  at: .
+            - grxy/install
             - run: yarn danger ci
     deploy:
         <<: *defaults
         steps:
-            - attach_workspace:
-                  at: .
+            - grxy/install
             - run: yarn --silent now --token=$NOW_TOKEN
             - run: yarn --silent now --token=$NOW_TOKEN alias grxy-$CIRCLE_SHA1.now.sh
     lint:
         <<: *defaults
         steps:
-            - attach_workspace:
-                  at: .
+            - grxy/install
             - run: yarn lint
     release:
         <<: *defaults
         steps:
-            - attach_workspace:
-                  at: .
+            - grxy/install
             - checkout
             - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
             - run: git config --global user.email "andrew@grexa.me"
@@ -75,56 +73,51 @@ jobs:
     test:
         <<: *defaults
         steps:
-            - attach_workspace:
-                  at: .
+            - grxy/install
             - run:
                   command: yarn test --ci --reporters=default --reporters=jest-junit --no-cache
                   environment:
                       JEST_JUNIT_OUTPUT: 'reports/jest/results.xml'
             - store_test_results:
                   path: reports
-    test-integration:
-        docker:
-            - image: cypress/browsers:chrome67-ff57
-        steps:
-            - attach_workspace:
-                  at: .
-            - run: yarn cypress install
-            - run: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run
+    # test-integration:
+    #     docker:
+    #         - image: cypress/browsers:chrome67-ff57
+    #     steps:
+    #         - grxy/install
+    #         - run: yarn cypress install
+    #         - run: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run
 
 workflows:
     version: 2
     build:
         jobs:
-            # - build:
-            #       requires:
-            #           - install
             # - alias:
             #       <<: *master
             #       requires:
             #           - deploy
             #           - release
-            - danger:
+            # - build
+            - cypress/install:
+                  build: 'yarn workspace @grxy/next build'
+            - cypress/run:
+                  executor: cypress/base-12
+                  install-command: yarn install --frozen-lockfile
                   requires:
-                      - install
-            # - deploy:
-            #       requires:
-            #           - install
-            - install
-            - lint:
-                  requires:
-                      - install
+                      - cypress/install
+                  start: 'yarn workspace @grxy/next start'
+                  yarn: true
+            - danger
+            # - deploy
+            - lint
             - release:
                   <<: *master
                   requires:
                       #   - build
-                      - install
                       - lint
                       - test
                       #   - test-integration
-            - test:
-                  requires:
-                      - install
+            - test
             # - test-integration:
             #       requires:
             #           - deploy

@@ -64,3 +64,6 @@ typings/
 dist
 private
 yarn-offline-mirror
+
+# built CircleCI configs
+.circleci/processed-config.yml
