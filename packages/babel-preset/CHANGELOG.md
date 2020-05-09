@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.14](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.13...@grxy/babel-preset@0.3.14) (2020-05-09)
+
+
+### Bug Fixes
+
+* linting works again ([#660](https://github.com/grxy/grxy/issues/660)) ([4ba1356](https://github.com/grxy/grxy/commit/4ba1356b71442317a6939e171930ae953afc496a))
+
+
+
+
+
 ## [0.3.13](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.12...@grxy/babel-preset@0.3.13) (2019-07-06)
 
 **Note:** Version bump only for package @grxy/babel-preset
