@@ -49,7 +49,7 @@ describe('<withThemeProvider />', () => {
     })
 
     it('time and timezone are undefined in the browser', async () => {
-        const browser = process.browser
+        const { browser } = process
 
         process.browser = true
 

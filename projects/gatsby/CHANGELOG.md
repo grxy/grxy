@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @grxy/gatsby
 
-
-
-
-
 ## [0.1.177](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.176...@grxy/gatsby@0.1.177) (2019-06-21)
 
 ### Bug Fixes

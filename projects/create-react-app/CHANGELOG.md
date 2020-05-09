@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @grxy/create-react-app
 
-
-
-
-
 ## [0.2.29](https://github.com/grxy/grxy/tree/master/projects/create-react-app/compare/@grxy/create-react-app@0.2.28...@grxy/create-react-app@0.2.29) (2019-06-26)
 
 **Note:** Version bump only for package @grxy/create-react-app
