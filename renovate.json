@@ -2,6 +2,7 @@
     "extends": [
         ":automergeAll",
         ":automergeBranch",
+        ":combinePatchMinorReleases",
         ":disableRateLimiting",
         ":enableRenovate",
         ":enableVulnerabilityAlerts",
@@ -20,7 +21,8 @@
         ":separateMajorReleases",
         ":unpublishSafe",
         ":updateNotScheduled",
-        "group:all"
+        "group:monorepos",
+        "group:recommended"
     ],
     "rebaseWhen": "conflicted"
 }
