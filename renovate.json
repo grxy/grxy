@@ -1,7 +1,6 @@
 {
     "extends": [
         ":automergeAll",
-        ":combinePatchMinorReleases",
         ":disableRateLimiting",
         ":enableVulnerabilityAlerts",
         ":ignoreModulesAndTests",
@@ -19,7 +18,6 @@
         ":separateMajorReleases",
         ":unpublishSafe",
         ":updateNotScheduled",
-        "group:monorepos",
-        "group:recommended"
+        "group:all"
     ]
 }
