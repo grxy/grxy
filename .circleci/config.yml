@@ -116,9 +116,10 @@ workflows:
                   executor: cypress/base-12
                   install-command: 'yarn --frozen-lockfile'
                   post-install:
+                      - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir
                       - run: 'yarn cypress install'
-                  requires:
-                      - install
+                  #   requires:
+                  #       - install
                   start: 'yarn workspace @grxy/next start'
                   verify-command: 'yarn cypress verify'
                   wait-on: 'http://localhost:3000'
