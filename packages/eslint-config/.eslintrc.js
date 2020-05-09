@@ -1,5 +1,3 @@
-const prettier = require('./prettier.config')
-
 module.exports = {
     env: {
         es6: true,
@@ -194,7 +192,7 @@ module.exports = {
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'error',
-        'prettier/prettier': ['error', prettier],
+        'prettier/prettier': ['error'],
         'promise/param-names': 'error',
         'react/default-props-match-prop-types': 'error',
 

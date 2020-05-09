@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @grxy/apollo-server
 
-
-
-
-
 ## [0.3.67](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.66...@grxy/apollo-server@0.3.67) (2019-06-26)
 
 **Note:** Version bump only for package @grxy/apollo-server

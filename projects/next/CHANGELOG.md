@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @grxy/next
 
-
-
-
-
 ## [0.10.33](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.32...@grxy/next@0.10.33) (2019-06-22)
 
 ### Bug Fixes

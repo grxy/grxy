@@ -2,7 +2,7 @@ const mockEnzyme = {
     configure: jest.fn(),
 }
 
-const mockAdapter = function() {}
+const mockAdapter = function () {}
 
 jest.mock('enzyme', () => mockEnzyme)
 jest.mock('enzyme-adapter-react-16', () => mockAdapter)

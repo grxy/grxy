@@ -7,10 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @grxy/babel-preset
 
-
-
-
-
 ## [0.3.12](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.11...@grxy/babel-preset@0.3.12) (2019-06-09)
 
 ### Bug Fixes
