@@ -1,7 +1,3 @@
-import { mount } from 'enzyme'
-import React from 'react'
-import { act } from 'react-dom/test-utils'
-
 import withThemeProvider from './withThemeProvider'
 
 jest.mock('../lib/theme', () => ({
@@ -11,42 +7,8 @@ jest.mock('../lib/theme', () => ({
 }))
 
 describe('<withThemeProvider />', () => {
-    let wrapper, Component, ThemeProvider
-    beforeEach(() => {
-        act(() => {
-            jest.useFakeTimers()
-
-            Component = () => 'test'
-
-            ThemeProvider = withThemeProvider(Component)
-
-            wrapper = mount(
-                <ThemeProvider>
-                    <></>
-                </ThemeProvider>,
-            )
-
-            jest.runTimersToTime(72e5)
-        })
-    })
-
-    it('renders a theme based on the current time', () => {
-        expect(wrapper).toMatchInlineSnapshot(`
-<withThemeProvider(App)>
-  <ThemeProvider
-    theme={
-      Object {
-        "test": true,
-      }
-    }
-  >
-    <Component>
-      test
-    </Component>
-  </ThemeProvider>
-</withThemeProvider(App)>
-`)
-    })
+    const Component = () => 'test'
+    const ThemeProvider = withThemeProvider(Component)
 
     it('time and timezone are undefined in the browser', async () => {
         const { browser } = process

@@ -1,4 +1,4 @@
-import { mount } from 'enzyme'
+import { render as r } from '@testing-library/react'
 import React from 'react'
 import { act } from 'react-dom/test-utils'
 
@@ -21,7 +21,7 @@ describe('useHourlyEffect', () => {
                 return null
             }
 
-            wrapper = mount(<Component />)
+            wrapper = r(<Component />)
         })
     })
 
@@ -45,23 +45,16 @@ describe('useHourlyEffect', () => {
         act(() => {
             fn = jest.fn()
 
-            let random = Math.random()
-
             const Component = () => {
                 useHourlyEffect(() => {
                     fn()
-                }, [random])
+                }, [Math.random()])
 
                 return null
             }
 
-            wrapper = mount(<Component />)
-
-            random = Math.random()
-
-            wrapper.setProps({
-                test: true,
-            })
+            wrapper = r(<Component />)
+            wrapper.rerender(<Component test />)
         })
 
         expect(fn).toHaveBeenCalledTimes(2)
@@ -81,11 +74,8 @@ describe('useHourlyEffect', () => {
                 return null
             }
 
-            const wrapper = mount(<Component />)
-
-            wrapper.setProps({
-                test: true,
-            })
+            wrapper = r(<Component />)
+            wrapper.rerender()
         })
 
         expect(fn).toHaveBeenCalledTimes(1)

@@ -19,7 +19,7 @@ module.exports = {
     setupFilesAfterEnv: [
         '<rootDir>/scripts/jest/setupTestFrameworkScriptFile.js',
     ],
-    snapshotSerializers: ['enzyme-to-json/serializer', 'jest-emotion'],
+    snapshotSerializers: ['jest-emotion'],
     testPathIgnorePatterns: ['/dist/', '/node_modules/'],
     testRegex: '\\.test\\.js$',
     transformIgnorePatterns: ['<rootDir>/node_modules/(?!@grxy)'],
