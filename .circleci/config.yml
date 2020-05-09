@@ -23,7 +23,7 @@ orbs:
                               - cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                     - run: yarn --frozen-lockfile
                     - run: yarn cypress install
-                    - run: pwd && ls && ls ./~ && ls ~
+                    - run: pwd && ls && ls . && yarn cache dir && ls `yarn cache dir`
                     - save_cache:
                           key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                           paths:
