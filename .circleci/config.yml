@@ -21,9 +21,9 @@ orbs:
                     - restore_cache:
                           keys:
                               - cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+                    - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir
                     - run: yarn --frozen-lockfile
                     - run: yarn cypress install
-                    - run: pwd && ls && ls . && yarn cache dir && ls `yarn cache dir`
                     - save_cache:
                           key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                           paths:
