@@ -25,7 +25,7 @@ orbs:
                           name: Save Yarn Package Cache
                           key: yarn-packages-{{ checksum "yarn.lock" }}
                           paths:
-                              - ~/.cache/yarn
+                              - ~/.cache
         executors:
             node:
                 docker:
@@ -101,8 +101,6 @@ workflows:
             - cypress/install:
                   build: 'yarn workspace @grxy/next build'
                   executor: cypress/base-12
-                  install-command: yarn install --frozen-lockfile
-                  yarn: true
             - cypress/run:
                   executor: cypress/base-12
                   requires:
