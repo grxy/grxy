@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.36](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.35...@grxy/next@0.10.36) (2020-05-09)
+
+
+### Bug Fixes
+
+* changelog formatting ([1c5cc23](https://github.com/grxy/grxy/tree/master/projects/next/commit/1c5cc23406145f295511c69c3488cc991c896790))
+
+
+
+
+
 ## [0.10.35](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.34...@grxy/next@0.10.35) (2020-05-09)
 
 ### Bug Fixes
