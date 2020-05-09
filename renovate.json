@@ -1,0 +1,25 @@
+{
+    "extends": [
+        ":automergeAll",
+        ":combinePatchMinorReleases",
+        ":disableRateLimiting",
+        ":enableVulnerabilityAlerts",
+        ":ignoreModulesAndTests",
+        ":ignoreUnstable",
+        ":maintainLockFilesWeekly",
+        ":masterIssue",
+        ":masterIssueApproval",
+        ":pinAllExceptPeerDependencies",
+        ":prImmediately",
+        ":rebaseStalePrs",
+        ":renovatePrefix",
+        ":respectLatest",
+        ":semanticCommits",
+        ":semanticPrefixChore",
+        ":separateMajorReleases",
+        ":unpublishSafe",
+        ":updateNotScheduled",
+        "group:monorepos",
+        "group:recommended"
+    ]
+}

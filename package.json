@@ -39,26 +39,6 @@
             "pre-commit": "lint-staged"
         }
     },
-    "renovate": {
-        "extends": [
-            "config:base"
-        ],
-        "labels": [
-            "dependencies"
-        ],
-        "packageRules": [
-            {
-                "packagePatterns": [
-                    "*"
-                ],
-                "minor": {
-                    "automerge": true,
-                    "groupName": "all non-major dependencies",
-                    "groupSlug": "all-minor-patch"
-                }
-            }
-        ]
-    },
     "scripts": {
         "build": "yarn compose:prod build",
         "clean": "run-p clean:packages clean:projects clean:root",
