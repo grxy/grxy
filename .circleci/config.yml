@@ -100,7 +100,7 @@ workflows:
             # - build
             - cypress/run:
                   build: 'yarn workspace @grxy/next build'
-                  command: 'yarn cypress run'
+                  command: 'CYPRESS_baseUrl=http://localhost:3000 yarn cypress run'
                   executor: cypress/base-12
                   install-command: 'yarn --frozen-lockfile'
                   post-install:
