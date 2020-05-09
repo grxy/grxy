@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.70](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.69...@grxy/eslint-config@0.2.70) (2020-05-09)
+
+
+### Bug Fixes
+
+* changelog formatting ([1c5cc23](https://github.com/grxy/grxy/commit/1c5cc23406145f295511c69c3488cc991c896790))
+
+
+
+
+
 ## [0.2.69](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.68...@grxy/eslint-config@0.2.69) (2020-05-09)
 
 ### Bug Fixes
