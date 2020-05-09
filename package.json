@@ -21,7 +21,7 @@
         "cypress": "3.3.2",
         "danger": "9.0.3",
         "eslint": "6.8.0",
-        "gatsby-cli": "2.7.8",
+        "gatsby-cli": "2.12.15",
         "husky": "4.2.5",
         "jest": "26.0.1",
         "jest-emotion": "10.0.32",
