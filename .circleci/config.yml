@@ -101,6 +101,7 @@ workflows:
             - cypress/install:
                   build: 'yarn workspace @grxy/next build'
                   executor: cypress/base-12
+                  yarn: true
             - cypress/run:
                   executor: cypress/base-12
                   requires:
