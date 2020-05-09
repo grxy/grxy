@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.179](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.178...@grxy/gatsby@0.1.179) (2020-05-09)
+
+
+### Bug Fixes
+
+* linting works again ([#660](https://github.com/grxy/grxy/tree/master/projects/gatsby/issues/660)) ([4ba1356](https://github.com/grxy/grxy/tree/master/projects/gatsby/commit/4ba1356b71442317a6939e171930ae953afc496a))
+
+
+
+
+
 ## [0.1.178](https://github.com/grxy/grxy/tree/master/projects/gatsby/compare/@grxy/gatsby@0.1.177...@grxy/gatsby@0.1.178) (2019-07-06)
 
 **Note:** Version bump only for package @grxy/gatsby

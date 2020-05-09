@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.69](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.68...@grxy/apollo-server@0.3.69) (2020-05-09)
+
+
+### Bug Fixes
+
+* linting works again ([#660](https://github.com/grxy/grxy/tree/master/projects/apollo-server/issues/660)) ([4ba1356](https://github.com/grxy/grxy/tree/master/projects/apollo-server/commit/4ba1356b71442317a6939e171930ae953afc496a))
+
+
+
+
+
 ## [0.3.68](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.67...@grxy/apollo-server@0.3.68) (2019-07-06)
 
 **Note:** Version bump only for package @grxy/apollo-server
