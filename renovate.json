@@ -1,10 +1,13 @@
 {
     "extends": [
         ":automergeAll",
+        ":automergeBranch",
         ":disableRateLimiting",
+        ":enableRenovate",
         ":enableVulnerabilityAlerts",
         ":ignoreModulesAndTests",
         ":ignoreUnstable",
+        ":label(dependencies)",
         ":maintainLockFilesWeekly",
         ":masterIssue",
         ":masterIssueApproval",
