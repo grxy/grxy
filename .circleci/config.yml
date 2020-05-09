@@ -15,17 +15,23 @@ orbs:
         commands:
             install:
                 steps:
+                    - attach_workspace:
+                          at: ~/
                     - checkout
                     - restore_cache:
-                          name: Restore Yarn Package Cache
                           keys:
-                              - yarn-packages-{{ checksum "yarn.lock" }}
+                              - cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                     - run: yarn --frozen-lockfile
+                    - run: yarn cypress install
                     - save_cache:
-                          name: Save Yarn Package Cache
-                          key: yarn-packages-{{ checksum "yarn.lock" }}
+                          key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                           paths:
                               - ~/.cache
+                    - persist_to_workspace:
+                          root: ~/
+                          paths:
+                              - project
+                              - .cache/Cypress
         executors:
             node:
                 docker:
@@ -56,6 +62,10 @@ jobs:
             - grxy/install
             - run: yarn --silent now --token=$NOW_TOKEN
             - run: yarn --silent now --token=$NOW_TOKEN alias grxy-$CIRCLE_SHA1.now.sh
+    install:
+        <<: *defaults
+        steps:
+            - grxy/install
     lint:
         <<: *defaults
         steps:
@@ -100,18 +110,26 @@ workflows:
             # - build
             - cypress/run:
                   build: 'yarn workspace @grxy/next build'
+                  cache-key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                   command: 'CYPRESS_baseUrl=http://localhost:3000 yarn cypress run'
                   executor: cypress/base-12
                   install-command: 'yarn --frozen-lockfile'
                   post-install:
                       - run: 'yarn cypress install'
+                  requires:
+                      - install
                   start: 'yarn workspace @grxy/next start'
                   verify-command: 'yarn cypress verify'
                   wait-on: 'http://localhost:3000'
                   yarn: true
-            - danger
+            - danger:
+                  requires:
+                      - install
             # - deploy
-            - lint
+            - install
+            - lint:
+                  requires:
+                      - install
             - release:
                   <<: *master
                   requires:
@@ -119,7 +137,9 @@ workflows:
                       - lint
                       - test
                       #   - test-integration
-            - test
+            - test:
+                  requires:
+                      - install
             # - test-integration:
             #       requires:
             #           - deploy
