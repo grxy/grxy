@@ -9,8 +9,6 @@ node_modules
 packages/algorithms
 packages/data-structures
 packages/eslint-config
-projects/create-react-app
-projects/gatsby
 yarn-offline-mirror
 /package.json
 **/.cache
