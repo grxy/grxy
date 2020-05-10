@@ -9,35 +9,24 @@ master: &master
             only: master
 
 orbs:
-    cypress: cypress-io/cypress@1
     grxy:
         commands:
             install:
                 steps:
-                    # - attach_workspace:
-                    #       at: ~/
                     - checkout
                     - restore_cache:
                           keys:
-                              - cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+                              - cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                     - run: yarn --frozen-lockfile
-                    - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
                     - run: yarn cypress install
-                    - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
                     - save_cache:
                           key: cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                           paths:
                               - ~/.cache
-                    # - persist_to_workspace:
-                    #       root: .
-                    #       paths:
-                    #           - .cache/Cypress
         executors:
             node:
                 docker:
                     - image: circleci/node:12-browsers
-                # environment:
-                #     - CYPRESS_CACHE_FOLDER: /home/circleci/.cache/Cypress
 
 jobs:
     alias:
@@ -45,14 +34,6 @@ jobs:
         steps:
             - grxy/install
             - run: yarn --silent now alias --token=$NOW_TOKEN
-    # build:
-    #     <<: *defaults
-    #     steps:
-    #         - grxy/install
-    #         - setup_remote_docker:
-    #               docker_layer_caching: true
-    #         - run: echo "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
-    #         - run: yarn build
     danger:
         <<: *defaults
         steps:
@@ -112,39 +93,15 @@ workflows:
             #       requires:
             #           - deploy
             #           - release
-            # - build
-            # - cypress/run:
-            #       build: 'yarn workspace @grxy/next build'
-            #       cache-key: cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            #       command: 'CYPRESS_baseUrl=http://localhost:3000 yarn cypress run'
-            #       executor: grxy/node
-            #       install-command: 'yarn --frozen-lockfile'
-            #       post-install:
-            #           - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
-            #           - run: 'yarn cypress install'
-            #           - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
-            #       #   requires:
-            #       #       - install
-            #       start: 'yarn workspace @grxy/next start'
-            #       verify-command: 'yarn cypress verify'
-            #       wait-on: 'http://localhost:3000'
-            #       yarn: true
-            - danger:
-                  requires:
-                      - install
+            - danger
             # - deploy
             - install
-            - lint:
-                  requires:
-                      - install
+            - lint
             - release:
                   <<: *master
                   requires:
-                      #   - build
                       - lint
                       - test
-                      #   - test-integration
-            - test:
-                  requires:
-                      - install
+                      - test-integration
+            - test
             - test-integration
