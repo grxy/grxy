@@ -20,9 +20,10 @@ orbs:
                     - restore_cache:
                           keys:
                               - cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
-                    - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir
+                    - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
                     - run: yarn --frozen-lockfile
                     - run: yarn cypress install
+                    - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
                     - save_cache:
                           key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                           paths:
@@ -117,8 +118,9 @@ workflows:
                   executor: grxy/node
                   install-command: 'yarn --frozen-lockfile'
                   post-install:
-                      - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir
+                      - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
                       - run: 'yarn cypress install'
+                      - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
                   #   requires:
                   #       - install
                   start: 'yarn workspace @grxy/next start'
