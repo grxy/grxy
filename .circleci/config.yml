@@ -20,7 +20,7 @@ orbs:
                     - run: yarn --frozen-lockfile
                     - run: yarn cypress install
                     - save_cache:
-                          key: cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+                          key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                           paths:
                               - ~/.cache
         executors:
