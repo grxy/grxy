@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/grxy/grxy/compare/@grxy/data-structures@0.2.1...@grxy/data-structures@0.2.2) (2020-05-10)
+
+
+### Bug Fixes
+
+* changelog formatting ([1c5cc23](https://github.com/grxy/grxy/commit/1c5cc23406145f295511c69c3488cc991c896790))
+
+
+
+
+
 ## [0.2.1](https://github.com/grxy/grxy/compare/@grxy/data-structures@0.2.0...@grxy/data-structures@0.2.1) (2020-05-09)
 
 ### Bug Fixes
