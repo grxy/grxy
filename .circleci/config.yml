@@ -46,14 +46,14 @@ jobs:
         steps:
             - grxy/install
             - run: yarn --silent now alias --token=$NOW_TOKEN
-    build:
-        <<: *defaults
-        steps:
-            - grxy/install
-            - setup_remote_docker:
-                  docker_layer_caching: true
-            - run: echo "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
-            - run: yarn build
+    # build:
+    #     <<: *defaults
+    #     steps:
+    #         - grxy/install
+    #         - setup_remote_docker:
+    #               docker_layer_caching: true
+    #         - run: echo "SKIP_PREFLIGHT_CHECK=true" > ./projects/create-react-app/.env
+    #         - run: yarn build
     danger:
         <<: *defaults
         steps:
