@@ -110,3 +110,4 @@ workflows:
                       - test-integration
             - test
             - test-integration
+            - typecheck
