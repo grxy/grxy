@@ -4,7 +4,11 @@ module.exports = {
         jest: true,
         node: true,
     },
-    extends: [require.resolve('eslint-config-react-app')],
+    extends: [
+        'eslint-config-react-app',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+    ],
     globals: {
         browser: true,
         document: false,
@@ -12,7 +16,7 @@ module.exports = {
         navigator: false,
         window: false,
     },
-    parser: 'babel-eslint',
+    parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
             jsx: true,
@@ -21,6 +25,7 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: [
+        '@typescript-eslint',
         'import',
         'jest',
         'node',
@@ -30,6 +35,9 @@ module.exports = {
         'react-hooks',
     ],
     rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-member-accessibility': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
         'arrow-body-style': 'error',

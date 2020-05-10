@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "diagnostics": true,
+        "target": "esnext",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "jsx": "react",
+        "noEmit": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "strict": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true
+    },
+    "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+    "exclude": ["**/coverage", "**/dist", "**/build", "**/node_modules"]
+}

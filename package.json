@@ -47,7 +47,7 @@
         "coverage": "open coverage/lcov-report/index.html",
         "dev:graphql": "lerna --scope @grxy/apollo-server --scope @grxy/next run dev --parallel",
         "dev:next": "lerna --scope @grxy/next run dev --parallel",
-        "eslint": "eslint '**/*.{js,mjs}'",
+        "eslint": "eslint '**/*.{js,mjs,ts,tsx}'",
         "lint": "run-p prettier eslint",
         "lint:fix": "run-p 'prettier --write' 'eslint --fix'",
         "prettier": "prettier '**/*.{graphql,json,md,yml}' --list-different",

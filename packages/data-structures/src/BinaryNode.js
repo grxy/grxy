@@ -19,6 +19,10 @@ class BinaryNode extends Node {
         return null
     }
 
+    set left(value) {
+        this.children[0] = value
+    }
+
     get right() {
         const right = this.children[1]
 
@@ -27,10 +31,6 @@ class BinaryNode extends Node {
         }
 
         return null
-    }
-
-    set left(value) {
-        this.children[0] = value
     }
 
     set right(value) {

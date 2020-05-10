@@ -83,6 +83,11 @@ jobs:
                   background: true
             - run: npx wait-on http://localhost:3000
             - run: CYPRESS_baseUrl=http://localhost:3000 yarn cypress run
+    typecheck:
+        <<: *defaults
+        steps:
+            - grxy/install
+            - run: yarn tsc
 
 workflows:
     version: 2
