@@ -29,7 +29,7 @@ orbs:
                           paths:
                               - ~/.cache
                     - persist_to_workspace:
-                          root: /home/circleci
+                          root: .
                           paths:
                               - project
                               - .cache/Cypress
@@ -97,6 +97,11 @@ jobs:
         <<: *defaults
         steps:
             - grxy/install
+            - run: yarn workspace @grxy/next build
+            - run:
+                  command: yarn workspace @grxy/next start
+                  background: true
+            - run: npx wait-on http://localhost:3000
             - run: CYPRESS_baseUrl=http://localhost:3000 yarn cypress run
 
 workflows:
@@ -109,22 +114,22 @@ workflows:
             #           - deploy
             #           - release
             # - build
-            - cypress/run:
-                  build: 'yarn workspace @grxy/next build'
-                  cache-key: cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
-                  command: 'CYPRESS_baseUrl=http://localhost:3000 yarn cypress run'
-                  executor: grxy/node
-                  install-command: 'yarn --frozen-lockfile'
-                  post-install:
-                      - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
-                      - run: 'yarn cypress install'
-                      - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
-                  #   requires:
-                  #       - install
-                  start: 'yarn workspace @grxy/next start'
-                  verify-command: 'yarn cypress verify'
-                  wait-on: 'http://localhost:3000'
-                  yarn: true
+            # - cypress/run:
+            #       build: 'yarn workspace @grxy/next build'
+            #       cache-key: cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            #       command: 'CYPRESS_baseUrl=http://localhost:3000 yarn cypress run'
+            #       executor: grxy/node
+            #       install-command: 'yarn --frozen-lockfile'
+            #       post-install:
+            #           - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
+            #           - run: 'yarn cypress install'
+            #           - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
+            #       #   requires:
+            #       #       - install
+            #       start: 'yarn workspace @grxy/next start'
+            #       verify-command: 'yarn cypress verify'
+            #       wait-on: 'http://localhost:3000'
+            #       yarn: true
             - danger:
                   requires:
                       - install
