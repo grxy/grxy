@@ -20,7 +20,15 @@ module.exports = {
         ecmaVersion: 9,
         sourceType: 'module',
     },
-    plugins: ['import', 'jest', 'node', 'promise', 'prettier', 'react'],
+    plugins: [
+        'import',
+        'jest',
+        'node',
+        'promise',
+        'prettier',
+        'react',
+        'react-hooks',
+    ],
     rules: {
         'accessor-pairs': 'error',
         'array-callback-return': 'error',
