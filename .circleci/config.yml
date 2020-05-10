@@ -19,17 +19,17 @@ orbs:
                     - checkout
                     - restore_cache:
                           keys:
-                              - cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
-                    - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
+                              - cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                     - run: yarn --frozen-lockfile
+                    - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
                     - run: yarn cypress install
                     - run: pwd; ls; echo; cd ~; pwd; ls; yarn cache dir; cd ~/.cache; pwd; ls
                     - save_cache:
-                          key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+                          key: cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                           paths:
                               - ~/.cache
                     - persist_to_workspace:
-                          root: ~/
+                          root: /home/circleci
                           paths:
                               - project
                               - .cache/Cypress
@@ -38,7 +38,7 @@ orbs:
                 docker:
                     - image: circleci/node:12-browsers
                 environment:
-                    - CYPRESS_CACHE_FOLDER: ~/.cache/Cypress
+                    - CYPRESS_CACHE_FOLDER: /home/circleci/.cache/Cypress
 
 jobs:
     alias:
@@ -93,13 +93,11 @@ jobs:
                       JEST_JUNIT_OUTPUT: 'reports/jest/results.xml'
             - store_test_results:
                   path: reports
-    # test-integration:
-    #     docker:
-    #         - image: cypress/browsers:chrome67-ff57
-    #     steps:
-    #         - grxy/install
-    #         - run: yarn cypress install
-    #         - run: CYPRESS_baseUrl=https://grxy-$CIRCLE_SHA1.now.sh yarn cypress run
+    test-integration:
+        <<: *defaults
+        steps:
+            - grxy/install
+            - run: CYPRESS_baseUrl=http://localhost:3000 yarn cypress run
 
 workflows:
     version: 2
@@ -113,7 +111,7 @@ workflows:
             # - build
             - cypress/run:
                   build: 'yarn workspace @grxy/next build'
-                  cache-key: cache-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
+                  cache-key: cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                   command: 'CYPRESS_baseUrl=http://localhost:3000 yarn cypress run'
                   executor: grxy/node
                   install-command: 'yarn --frozen-lockfile'
@@ -145,6 +143,4 @@ workflows:
             - test:
                   requires:
                       - install
-            # - test-integration:
-            #       requires:
-            #           - deploy
+            - test-integration
