@@ -14,8 +14,8 @@ orbs:
         commands:
             install:
                 steps:
-                    - attach_workspace:
-                          at: ~/
+                    # - attach_workspace:
+                    #       at: ~/
                     - checkout
                     - restore_cache:
                           keys:
@@ -28,17 +28,16 @@ orbs:
                           key: cache2-{{ arch }}-{{ .Branch }}-{{ checksum "yarn.lock" }}
                           paths:
                               - ~/.cache
-                    - persist_to_workspace:
-                          root: .
-                          paths:
-                              - project
-                              - .cache/Cypress
+                    # - persist_to_workspace:
+                    #       root: .
+                    #       paths:
+                    #           - .cache/Cypress
         executors:
             node:
                 docker:
                     - image: circleci/node:12-browsers
-                environment:
-                    - CYPRESS_CACHE_FOLDER: /home/circleci/.cache/Cypress
+                # environment:
+                #     - CYPRESS_CACHE_FOLDER: /home/circleci/.cache/Cypress
 
 jobs:
     alias:
