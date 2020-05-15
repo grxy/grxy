@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.76](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.75...@grxy/apollo-server@0.3.76) (2020-05-15)
+
+**Note:** Version bump only for package @grxy/apollo-server
+
+
+
+
+
 ## [0.3.75](https://github.com/grxy/grxy/tree/master/projects/apollo-server/compare/@grxy/apollo-server@0.3.74...@grxy/apollo-server@0.3.75) (2020-05-12)
 
 **Note:** Version bump only for package @grxy/apollo-server
