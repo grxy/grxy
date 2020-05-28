@@ -64,6 +64,7 @@ typings/
 dist
 private
 yarn-offline-mirror
+.npmrc
 
 # built CircleCI configs
 .circleci/processed-config.yml
