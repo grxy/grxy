@@ -15,7 +15,7 @@
     },
     "devDependencies": {
         "@testing-library/jest-dom": "5.9.0",
-        "@testing-library/react": "10.2.0",
+        "@testing-library/react": "10.2.1",
         "babel-jest": "26.0.1",
         "core-js": "3.6.5",
         "cypress": "4.7.0",
