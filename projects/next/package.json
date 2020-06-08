@@ -17,7 +17,7 @@
         "apollo-link-ws": "1.0.20",
         "deepmerge": "4.2.2",
         "emotion-theming": "10.0.27",
-        "graphql": "15.0.0",
+        "graphql": "15.1.0",
         "graphql-subscriptions": "1.1.0",
         "graphql-tag": "2.10.3",
         "isomorphic-fetch": "2.2.1",
