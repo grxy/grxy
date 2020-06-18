@@ -9,7 +9,7 @@
     "private": true,
     "dependencies": {
         "@graphql-modules/core": "0.7.17",
-        "apollo-server": "2.14.4",
+        "apollo-server": "2.15.0",
         "dotenv": "8.2.0",
         "graphql": "15.1.0",
         "reflect-metadata": "0.1.13"
