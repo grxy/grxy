@@ -1,6 +1,6 @@
 {
     "name": "@grxy/eslint-config",
-    "version": "0.2.110",
+    "version": "0.2.111",
     "description": "My custom eslint config",
     "main": "index.js",
     "author": "Grex",
