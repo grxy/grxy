@@ -11,7 +11,7 @@
         "@graphql-modules/core": "0.7.17",
         "apollo-server": "2.15.1",
         "dotenv": "8.2.0",
-        "graphql": "15.2.0",
+        "graphql": "15.3.0",
         "reflect-metadata": "0.1.13"
     },
     "devDependencies": {
