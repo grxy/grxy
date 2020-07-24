@@ -12,6 +12,6 @@
         "@storybook/addon-knobs": "5.3.19",
         "@storybook/react": "5.3.19",
         "babel-loader": "8.1.0",
-        "webpack": "4.43.0"
+        "webpack": "4.44.0"
     }
 }
