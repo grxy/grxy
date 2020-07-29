@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.130](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.129...@grxy/eslint-config@0.2.130) (2020-07-29)
+
+**Note:** Version bump only for package @grxy/eslint-config
+
+
+
+
+
 ## [0.2.129](https://github.com/grxy/grxy/compare/@grxy/eslint-config@0.2.128...@grxy/eslint-config@0.2.129) (2020-07-28)
 
 **Note:** Version bump only for package @grxy/eslint-config
