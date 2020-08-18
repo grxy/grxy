@@ -8,7 +8,7 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "@emotion/core": "10.0.34",
+        "@emotion/core": "10.0.35",
         "@emotion/styled": "10.0.27",
         "apollo-cache-inmemory": "1.6.6",
         "apollo-client": "2.6.10",
