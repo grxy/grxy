@@ -1,6 +1,6 @@
 {
     "name": "@grxy/storybook",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "description": "My storybook config",
     "main": "index.js",
     "author": "Grex",
