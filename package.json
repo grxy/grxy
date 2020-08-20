@@ -18,7 +18,7 @@
         "@testing-library/react": "10.4.8",
         "babel-jest": "26.3.0",
         "core-js": "3.6.5",
-        "cypress": "4.12.1",
+        "cypress": "5.0.0",
         "danger": "10.4.0",
         "eslint": "7.7.0",
         "husky": "4.2.5",
