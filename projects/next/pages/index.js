@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import HeroHeader from '../components/HeroHeader'
 
-export default () => (
+const Index = () => (
     <>
         <Head>
             <title>Grex | engineer // mountaineer // adventurer</title>
@@ -45,3 +45,5 @@ export default () => (
         </ul>
     </>
 )
+
+export default Index

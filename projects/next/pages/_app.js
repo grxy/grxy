@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 import { ApolloProvider } from 'react-apollo'
@@ -14,39 +14,37 @@ class MyApp extends App {
         const { apolloClient, Component, pageProps } = this.props
 
         return (
-            <Container>
-                <ApolloProvider client={apolloClient}>
-                    <Head>
-                        <link
-                            href="/static/parrot.gif"
-                            rel="icon"
-                            type="image/gif"
-                        />
-                    </Head>
-                    <Global
-                        styles={(theme) =>
-                            css`
-                                * {
-                                    border: none;
-                                    margin: 0;
-                                    padding: 0;
-                                }
-
-                                html {
-                                    height: 100%;
-                                }
-
-                                body {
-                                    background: ${theme.colors.background};
-                                    color: #fff;
-                                    font-family: Lato, Helvetica, sans-serif;
-                                }
-                            `
-                        }
+            <ApolloProvider client={apolloClient}>
+                <Head>
+                    <link
+                        href="/static/parrot.gif"
+                        rel="icon"
+                        type="image/gif"
                     />
-                    <Component {...pageProps} />
-                </ApolloProvider>
-            </Container>
+                </Head>
+                <Global
+                    styles={(theme) =>
+                        css`
+                            * {
+                                border: none;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            html {
+                                height: 100%;
+                            }
+
+                            body {
+                                background: ${theme.colors.background};
+                                color: #fff;
+                                font-family: Lato, Helvetica, sans-serif;
+                            }
+                        `
+                    }
+                />
+                <Component {...pageProps} />
+            </ApolloProvider>
         )
     }
 }
