@@ -9,8 +9,8 @@
     "dependencies": {
         "@babel/core": "7.11.4",
         "@grxy/babel-preset": "^0.3.25",
-        "@storybook/addon-knobs": "6.0.20",
-        "@storybook/react": "6.0.20",
+        "@storybook/addon-knobs": "6.0.21",
+        "@storybook/react": "6.0.21",
         "babel-loader": "8.1.0",
         "webpack": "4.44.1"
     }
