@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.27](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.26...@grxy/babel-preset@0.3.27) (2020-09-04)
+
+**Note:** Version bump only for package @grxy/babel-preset
+
+
+
+
+
 ## [0.3.26](https://github.com/grxy/grxy/compare/@grxy/babel-preset@0.3.25...@grxy/babel-preset@0.3.26) (2020-09-01)
 
 **Note:** Version bump only for package @grxy/babel-preset
