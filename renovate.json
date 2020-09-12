@@ -21,7 +21,8 @@
         ":unpublishSafe",
         ":updateNotScheduled",
         "group:monorepos",
-        "group:recommended"
+        "group:recommended",
+        "schedule:monthly"
     ],
     "rebaseWhen": "conflicted"
 }
