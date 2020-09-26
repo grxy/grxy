@@ -14,8 +14,15 @@ export default function EditScreenInfo({ path }: { path: string }) {
                     Open up the code for this screen:
                 </Text>
 
-                <View style={tailwind('rounded-sm px-1 my-2 bg-gray-100')}>
-                    <MonoText style={tailwind('text-gray-800')}>
+                <View
+                    dark={tailwind('bg-gray-800')}
+                    light={tailwind('bg-gray-300')}
+                    style={tailwind('rounded-sm px-1 my-2')}
+                >
+                    <MonoText
+                        dark={tailwind('text-white')}
+                        style={tailwind('text-gray-800')}
+                    >
                         {path}
                     </MonoText>
                 </View>

@@ -18,26 +18,27 @@ export function useThemeColor(
 }
 
 type ThemeProps = {
-    lightColor?: string
-    darkColor?: string
+    light?: Record<string, unknown>
+    dark?: Record<string, unknown>
 }
 
 export type TextProps = ThemeProps & DefaultText['props']
 export type ViewProps = ThemeProps & DefaultView['props']
 
 export function Text(props: TextProps) {
-    const { style, lightColor, darkColor, ...otherProps } = props
-    const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text')
+    const { style, light, dark, ...otherProps } = props
 
-    return <DefaultText style={[{ color }, style]} {...otherProps} />
+    const theme = useColorScheme()
+    const themeStyles = props[theme] || {}
+
+    return <DefaultText style={[style, themeStyles]} {...otherProps} />
 }
 
 export function View(props: ViewProps) {
-    const { style, lightColor, darkColor, ...otherProps } = props
-    const backgroundColor = useThemeColor(
-        { light: lightColor, dark: darkColor },
-        'background',
-    )
+    const { style, light, dark, ...otherProps } = props
 
-    return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />
+    const theme = useColorScheme()
+    const themeStyles = props[theme] || {}
+
+    return <DefaultView style={[style, themeStyles]} {...otherProps} />
 }
