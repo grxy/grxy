@@ -31,7 +31,11 @@ export function Text(props: TextProps) {
     const theme = useColorScheme()
     const themeStyles = props[theme] || {}
 
-    return <DefaultText style={[style, themeStyles]} {...otherProps} />
+    const color = {
+        color: Colors[theme].text,
+    }
+
+    return <DefaultText style={[color, style, themeStyles]} {...otherProps} />
 }
 
 export function View(props: ViewProps) {

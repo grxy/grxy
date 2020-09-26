@@ -55,7 +55,7 @@ function TabBarIcon(props: { name: string; color: string }) {
 const TabOneStack = createStackNavigator<TabOneParamList>()
 
 const screenOptions = {
-    headerStyle: tailwind('bg-pink-800 text-white'),
+    headerStyle: tailwind('bg-pink-800'),
     headerTitleStyle: tailwind('text-white'),
 }
 
