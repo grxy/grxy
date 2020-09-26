@@ -3,7 +3,6 @@ import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import * as React from 'react'
-import { Text, View } from 'react-native'
 import tailwind from 'tailwind-rn'
 
 import Colors from '../constants/Colors'

@@ -1,5 +1,7 @@
+__generated__
 .babelrc
 .circleci/processed-config.yml
+.expo
 .next
 coverage
 dist

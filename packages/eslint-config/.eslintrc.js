@@ -293,4 +293,12 @@ module.exports = {
             version: 'latest',
         },
     },
+    overrides: [
+        {
+            files: ['*.ts', '*.tsx'],
+            rules: {
+                'react/prop-types': 'off',
+            },
+        },
+    ],
 }
