@@ -3,6 +3,8 @@ import { Ionicons } from '@expo/vector-icons'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import * as React from 'react'
+import { Text, View } from 'react-native'
+import tailwind from 'tailwind-rn'
 
 import Colors from '../constants/Colors'
 import useColorScheme from '../hooks/useColorScheme'
@@ -52,9 +54,14 @@ function TabBarIcon(props: { name: string; color: string }) {
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
 const TabOneStack = createStackNavigator<TabOneParamList>()
 
+const screenOptions = {
+    headerStyle: tailwind('bg-pink-800 text-white'),
+    headerTitleStyle: tailwind('text-white'),
+}
+
 function TabOneNavigator() {
     return (
-        <TabOneStack.Navigator>
+        <TabOneStack.Navigator screenOptions={screenOptions}>
             <TabOneStack.Screen
                 component={TabOneScreen}
                 name="TabOneScreen"
@@ -68,7 +75,7 @@ const TabTwoStack = createStackNavigator<TabTwoParamList>()
 
 function TabTwoNavigator() {
     return (
-        <TabTwoStack.Navigator>
+        <TabTwoStack.Navigator screenOptions={screenOptions}>
             <TabTwoStack.Screen
                 component={TabTwoScreen}
                 name="TabTwoScreen"
