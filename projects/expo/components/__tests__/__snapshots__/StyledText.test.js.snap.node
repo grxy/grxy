@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="css-text-901oao"
+  dir="auto"
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "rgba(0,0,0,1.00)",
+      "fontFamily": "space-mono",
+    }
+  }
+>
+  Snapshot test!
+</div>
+`;

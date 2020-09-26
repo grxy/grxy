@@ -54,6 +54,10 @@
         "release": "lerna publish --conventional-commits --github-release --yes",
         "storybook": "start-storybook -p 9001 -c ./packages/storybook",
         "test": "jest",
+        "test:expo": "yarn workspace @grxy/expo test",
         "test:integration": "CYPRESS_baseUrl=http://localhost:3000 yarn cypress run"
+    },
+    "dependencies": {
+        "expo-cli": "3.27.10"
     }
 }
