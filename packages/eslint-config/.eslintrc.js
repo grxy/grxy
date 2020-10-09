@@ -48,7 +48,7 @@ module.exports = {
         eqeqeq: 'error',
         'for-direction': 'error',
         'import/export': 'error',
-        'import/exports-last': 'error',
+        // 'import/exports-last': 'error',
         'import/first': 'error',
         'import/no-cycle': 'error',
         'import/no-duplicates': 'error',
@@ -279,7 +279,7 @@ module.exports = {
         'react/self-closing-comp': 'error',
         'react/void-dom-elements-no-children': 'error',
         'require-yield': 'error',
-        'sort-keys': ['warn', 'asc', { caseSensitive: false, natural: true }],
+        // 'sort-keys': ['warn', 'asc', { caseSensitive: false, natural: true }],
         'symbol-description': 'error',
         'unicode-bom': ['error', 'never'],
         'use-isnan': 'error',
@@ -293,4 +293,12 @@ module.exports = {
             version: 'latest',
         },
     },
+    overrides: [
+        {
+            files: ['*.ts', '*.tsx'],
+            rules: {
+                'react/prop-types': 'off',
+            },
+        },
+    ],
 }

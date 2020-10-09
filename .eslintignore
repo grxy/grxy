@@ -1,4 +1,6 @@
+__generated__
 !.eslintrc.js
+.expo
 .next
 coverage
 dist

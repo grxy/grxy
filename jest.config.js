@@ -10,17 +10,23 @@ module.exports = {
             statements: 80,
         },
     },
+    displayName: 'test',
     moduleNameMapper: {
         '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
             '<rootDir>/__mocks__/fileMock.js',
     },
+    projects: [
+        '<rootDir>',
+        //
+        // '<rootDir>/projects/expo',
+    ],
     resetModules: true,
     setupFilesAfterEnv: [
         '<rootDir>/scripts/jest/setupTestFrameworkScriptFile.js',
     ],
     snapshotSerializers: ['jest-emotion'],
-    testPathIgnorePatterns: ['/dist/', '/node_modules/'],
+    testPathIgnorePatterns: ['/dist/', '/node_modules/', 'projects/expo'],
     testRegex: '\\.test\\.js$',
     transformIgnorePatterns: ['<rootDir>/node_modules/(?!@grxy)'],
 }
