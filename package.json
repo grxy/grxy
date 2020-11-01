@@ -19,7 +19,7 @@
         "babel-jest": "26.3.0",
         "core-js": "3.6.5",
         "cypress": "5.5.0",
-        "danger": "10.4.0",
+        "danger": "10.5.0",
         "eslint": "7.8.1",
         "husky": "4.3.0",
         "jest": "26.4.2",
