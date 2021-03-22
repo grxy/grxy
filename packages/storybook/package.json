@@ -7,11 +7,11 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "@babel/core": "7.12.3",
+        "@babel/core": "7.13.10",
         "@grxy/babel-preset": "^0.3.28",
         "@storybook/addon-knobs": "6.0.21",
         "@storybook/react": "6.0.21",
-        "babel-loader": "8.1.0",
+        "babel-loader": "8.2.2",
         "webpack": "4.44.1"
     }
 }
