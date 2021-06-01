@@ -21,7 +21,7 @@
         "cypress": "5.5.0",
         "danger": "10.5.0",
         "eslint": "7.12.1",
-        "husky": "4.3.0",
+        "husky": "4.3.8",
         "jest": "26.4.2",
         "jest-emotion": "10.0.32",
         "jest-junit": "11.1.0",
