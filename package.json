@@ -58,6 +58,6 @@
         "test:integration": "CYPRESS_baseUrl=http://localhost:3000 yarn cypress run"
     },
     "dependencies": {
-        "expo-cli": "3.27.10"
+        "expo-cli": "3.28.6"
     }
 }
