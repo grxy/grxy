@@ -1,6 +1,6 @@
 {
     "name": "@grxy/storybook",
-    "version": "0.0.29",
+    "version": "0.0.30",
     "description": "My storybook config",
     "main": "index.js",
     "author": "Grex",
@@ -8,7 +8,7 @@
     "private": true,
     "dependencies": {
         "@babel/core": "7.14.6",
-        "@grxy/babel-preset": "^0.3.30",
+        "@grxy/babel-preset": "^0.3.31",
         "@storybook/addon-knobs": "6.2.9",
         "@storybook/react": "6.0.21",
         "babel-loader": "8.2.2",
