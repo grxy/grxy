@@ -1,6 +1,6 @@
 {
     "name": "@grxy/babel-preset",
-    "version": "0.3.32",
+    "version": "0.3.33",
     "description": "My custom babel preset",
     "main": "index.js",
     "author": "Grex",
