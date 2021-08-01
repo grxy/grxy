@@ -7,7 +7,7 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "@babel/core": "7.14.6",
+        "@babel/core": "7.14.8",
         "@grxy/babel-preset": "^0.3.31",
         "@storybook/addon-knobs": "6.2.9",
         "@storybook/react": "6.0.21",
