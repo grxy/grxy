@@ -20,7 +20,7 @@
         "core-js": "3.6.5",
         "cypress": "5.6.0",
         "danger": "10.5.0",
-        "eslint": "7.12.1",
+        "eslint": "7.32.0",
         "husky": "4.3.8",
         "jest": "26.4.2",
         "jest-emotion": "10.0.32",
