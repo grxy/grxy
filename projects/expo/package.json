@@ -1,6 +1,6 @@
 {
     "name": "@grxy/expo",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "main": "__generated__/AppEntry.js",
     "scripts": {
         "start": "expo start",
