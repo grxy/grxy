@@ -36,7 +36,7 @@
         "tailwind-rn": "1.1.1"
     },
     "devDependencies": {
-        "@babel/core": "7.15.0",
+        "@babel/core": "7.15.5",
         "@types/react": "16.14.15",
         "@types/react-native": "0.64.13",
         "jest-expo": "39.0.0",
