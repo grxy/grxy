@@ -31,7 +31,7 @@
         "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.2.tar.gz",
         "react-native-gesture-handler": "1.10.3",
         "react-native-safe-area-context": "3.1.4",
-        "react-native-screens": "2.10.1",
+        "react-native-screens": "2.18.1",
         "react-native-web": "0.13.18",
         "tailwind-rn": "1.1.1"
     },
