@@ -12,7 +12,7 @@
         "postinstall": "expo-yarn-workspaces postinstall"
     },
     "dependencies": {
-        "@expo/vector-icons": "10.2.1",
+        "@expo/vector-icons": "12.0.5",
         "@react-native-community/masked-view": "0.1.11",
         "@react-navigation/bottom-tabs": "5.11.15",
         "@react-navigation/native": "5.9.8",
