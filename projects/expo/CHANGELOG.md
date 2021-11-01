@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.20](https://github.com/grxy/grxy/compare/@grxy/expo@0.1.19...@grxy/expo@0.1.20) (2021-11-01)
+
+**Note:** Version bump only for package @grxy/expo
+
+
+
+
+
 ## [0.1.19](https://github.com/grxy/grxy/compare/@grxy/expo@0.1.18...@grxy/expo@0.1.19) (2021-10-03)
 
 **Note:** Version bump only for package @grxy/expo
