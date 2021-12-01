@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.71](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.70...@grxy/next@0.10.71) (2021-12-01)
+
+**Note:** Version bump only for package @grxy/next
+
+
+
+
+
 ## [0.10.70](https://github.com/grxy/grxy/tree/master/projects/next/compare/@grxy/next@0.10.69...@grxy/next@0.10.70) (2021-10-01)
 
 **Note:** Version bump only for package @grxy/next
