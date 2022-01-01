@@ -1,6 +1,6 @@
 {
     "name": "@grxy/next",
-    "version": "0.10.71",
+    "version": "0.10.72",
     "description": "Next.js playground",
     "main": "index.js",
     "repository": "https://github.com/grxy/grxy/tree/master/projects/next",
