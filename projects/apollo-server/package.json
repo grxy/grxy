@@ -15,8 +15,8 @@
         "reflect-metadata": "0.1.13"
     },
     "devDependencies": {
-        "@babel/cli": "7.15.7",
-        "@babel/core": "7.15.5",
+        "@babel/cli": "7.17.6",
+        "@babel/core": "7.17.8",
         "apollo": "2.33.6",
         "dotenv-cli": "4.1.1",
         "nodemon": "2.0.15",
