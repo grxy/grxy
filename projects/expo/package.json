@@ -33,7 +33,7 @@
         "react-native-safe-area-context": "3.3.2",
         "react-native-screens": "2.18.1",
         "react-native-web": "0.17.5",
-        "tailwind-rn": "1.1.1"
+        "tailwind-rn": "4.2.0"
     },
     "devDependencies": {
         "@babel/core": "7.15.5",
