@@ -19,7 +19,7 @@
         "emotion-theming": "10.0.27",
         "graphql": "15.8.0",
         "graphql-subscriptions": "1.2.1",
-        "graphql-tag": "2.12.5",
+        "graphql-tag": "2.12.6",
         "isomorphic-fetch": "2.2.1",
         "next": "10.1.2",
         "react": "16.14.0",
