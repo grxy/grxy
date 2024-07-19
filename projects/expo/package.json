@@ -14,9 +14,9 @@
     "dependencies": {
         "@expo/vector-icons": "10.2.1",
         "@react-native-community/masked-view": "0.1.11",
-        "@react-navigation/bottom-tabs": "5.11.15",
-        "@react-navigation/native": "5.9.8",
-        "@react-navigation/stack": "5.14.9",
+        "@react-navigation/bottom-tabs": "6.6.1",
+        "@react-navigation/native": "6.1.18",
+        "@react-navigation/stack": "6.4.1",
         "expo": "39.0.5",
         "expo-asset": "8.3.3",
         "expo-constants": "9.3.5",
