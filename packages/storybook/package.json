@@ -11,7 +11,7 @@
         "@grxy/babel-preset": "^0.3.35",
         "@storybook/addon-knobs": "6.4.0",
         "@storybook/react": "6.3.8",
-        "babel-loader": "8.2.2",
+        "babel-loader": "9.2.1",
         "webpack": "4.46.0"
     }
 }
