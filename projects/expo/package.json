@@ -26,8 +26,8 @@
         "expo-status-bar": "1.0.4",
         "expo-web-browser": "8.6.0",
         "expo-yarn-workspaces": "1.7.0",
-        "react": "16.14.0",
-        "react-dom": "16.14.0",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
         "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.2.tar.gz",
         "react-native-gesture-handler": "1.10.3",
         "react-native-safe-area-context": "3.3.2",
@@ -37,7 +37,7 @@
     },
     "devDependencies": {
         "@babel/core": "7.15.5",
-        "@types/react": "17.0.38",
+        "@types/react": "18.3.11",
         "@types/react-native": "0.64.13",
         "jest-expo": "39.0.0",
         "typescript": "3.9.10"
